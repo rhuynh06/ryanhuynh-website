@@ -29,7 +29,7 @@
     position: absolute;
     background: var(--circle-bg);
     border-radius: inherit;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTkuMzA1IDEuNjY3VjMuNzVoMS4zODlWMS42NjdoLTEuMzl6bS00LjcwNyAxLjk1bC0uOTgyLjk4Mkw1LjA5IDYuMDcybC45ODItLjk4Mi0xLjQ3My0xLjQ3M3ptMTAuODAyIDBMMTMuOTI3IDUuMDlsLjk4Mi45ODIgMS40NzMtMS40NzMtLjk4Mi0uOTgyek0xMCA1LjEzOWE0Ljg3MiA0Ljg3MiAwIDAwLTQuODYyIDQuODZBNC44NzIgNC44NzIgMCAwMDEwIDE0Ljg2MiA0Ljg3MiA0Ljg3MiAwIDAwMTQuODYgMTAgNC44NzIgNC44NzIgMCAwMDEwIDUuMTM5em0wIDEuMzg5QTMuNDYyIDMuNDYyIDAgMDExMy40NzEgMTBhMy40NjIgMy40NjIgMCAwMS0zLjQ3MyAzLjQ3MkEzLjQ2MiAzLjQ2MiAwIDAxNi41MjcgMTAgMy40NjIgMy40NjIgMCAwMTEwIDYuNTI4ek0xLjY2NSA5LjMwNXYxLjM5aDIuMDgzdi0xLjM5SDEuNjY2em0xNC41ODMgMHYxLjM5aDIuMDg0di0xLjM5aC0yLjA4NHpNNS4wOSAxMy45MjhMMy42MTYgMTUuNGwuOTgyLjk4MiAxLjQ3My0xLjQ3My0uOTgyLS45ODJ6bTkuODIgMGwtLjk4Mi45ODIgMS40NzMgMS40NzMuOTgyLS45ODItMS40NzMtMS40NzN6TTkuMzA1IDE2LjI1djIuMDgzaDEuMzg5VjE2LjI1aC0xLjM5eiIgLz4KPC9zdmc+");
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTkuMzA1IDEuNjY3VjMuNzVoMS4zODlWMS42NjdoLTEuMzl6bS00LjcwNyAxLjk1bC0uOTgyLjk4Mkw1LjA5IDYuMDcybC45ODItLjk4Mi0xLjQ3My0xLjQ3M3ptMTAuODAyIDBMMTMuOTI3IDUuMDlsLjk4Mi45ODIgMS40NzMtMS40NzMtLjk4Mi0uOTgyek0xMCA1LjEzOWE0Ljg3MiA0Ljg3MiAwIDAwLTQuODYyIDQuODZBNC44NzIgNC44NzIgMCAwMDEwIDE0Ljg2MiA0Ljg3MiA0Ljg3MiAwIDAwMTQuODYgMTAgNC44NzIgNC44NzIgMCAwMDEwIDUuMTM5em0wIDEuMzg5QTMuNDYyIDMuNDYyIDAgMDExMy40NzEgMTBhMy40NjIgMy40NjIgMCAwMS0zLjQ3MyAzLjQ3MkEzLjQ2MiAzLjQ2MiAwIDAxNi41MjcgMTAgMy40NjIgMy40NjIgMCAwMTEwIDYuNTI4ek0xLjY2NSA5LjMwNXYxLjM5aDIuMDgzdi0xLjM5SDEuNjY2em0xNC41ODMgMHYxLjM5aDIuMDg0di0xLjM5aC0yLjA4NHpNNS4wOSAxMy45MjhMMy42MTYgMTUuNGwuOTgyLjk4MiAxLjQ3My0xLjQ3My0uOTgyLS45ODJ6bTkuODIwIDBsLS45ODIuOTgyIDEuNDczIDEuNDczLjk4Mi0uOTgyLTEuNDczLTEuNDczeiIgLz4KPC9zdmc+");
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -70,4 +70,168 @@
     opacity: 1;
     width: 0;
     height: 0;
+}
+/* Default Light Theme (Clean Light Blue) */
+:root {
+    --background-color: #f5f9ff; /* Light blue background */
+    --text-color: #1a2a3a; /* Dark blue text */
+    --header-background: #e0f2ff; /* Light blue header */
+    --nav-link-color: #007acc; /* Bright blue for nav links */
+    --section-background: #ffffff; /* White for sections */
+    --footer-background: #e0f2ff; /* Light blue footer */
+    --switch-bg: #b3d9ff; /* Light blue for switch background */
+    --circle-bg: #007acc; /* Bright blue for switch circle */
+    --accent-color: #007acc; /* Bright blue for accents */
+    --code-background: #f0f7ff; /* Light blue for code blocks */
+    --code-text: #1a2a3a; /* Dark blue for code text */
+}
+
+/* Dark Theme (Sleek Dark Blue with Neon Accents) */
+[data-theme="dark"] {
+    --background-color: #0d1b2a; /* Dark blue background */
+    --text-color: #e0f2ff; /* Light blue text */
+    --header-background: #1a2a3a; /* Dark blue header */
+    --nav-link-color: #00ccff; /* Neon blue for nav links */
+    --section-background: #1a2a3a; /* Dark blue for sections */
+    --footer-background: #1a2a3a; /* Dark blue footer */
+    --switch-bg: #233554; /* Medium blue for switch background */
+    --circle-bg: #00ccff; /* Neon blue for switch circle */
+    --accent-color: #00ccff; /* Neon blue for accents */
+    --code-background: #1a2a3a; /* Dark blue for code blocks */
+    --code-text: #e0f2ff; /* Light blue for code text */
+}
+
+/* Apply the theme colors to the body and other elements */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--header-background);
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+section {
+    background-color: var(--section-background);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: var(--footer-background);
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+p, li {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Code Blocks */
+pre {
+    background-color: var(--code-background);
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+code {
+    color: var(--code-text);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+}
+
+/* Buttons */
+button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--nav-link-color);
+}
+
+/* Switch Styling */
+.ui-switch {
+    --switch-bg: var(--switch-bg);
+    --circle-bg: var(--circle-bg);
+}
+
+.slider {
+    background: var(--switch-bg);
+}
+
+.slider .circle {
+    background: var(--circle-bg);
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTkuMzA1IDEuNjY3VjMuNzVoMS4zODlWMS42NjdoLTEuMzl6bS00LjcwNyAxLjk1bC0uOTgyLjk4Mkw1LjA5IDYuMDcybC45ODItLjk4Mi0xLjQ3My0xLjQ3M3ptMTAuODAyIDBMMTMuOTI3IDUuMDlsLjk4Mi45ODIgMS40NzMtMS40NzMtLjk4Mi0uOTgyek0xMCA1LjEzOWE0Ljg3MiA0Ljg3MiAwIDAwLTQuODYyIDQuODZBNC44NzIgNC44NzIgMCAwMDEwIDE0Ljg2MiA0Ljg3MiA0Ljg3MiAwIDAwMTQuODYgMTAgNC44NzIgNC44NzIgMCAwMDEwIDUuMTM5em0wIDEuMzg5QTMuNDYyIDMuNDYyIDAgMDExMy40NzEgMTBhMy40NjIgMy40NjIgMCAwMS0zLjQ3MyAzLjQ3MkEzLjQ2MiAzLjQ2MiAwIDAxNi41MjcgMTAgMy40NjIgMy40NjIgMCAwMTEwIDYuNTI4ek0xLjY2NSA5LjMwNXYxLjM5aDIuMDgzdi0xLjM5SDEuNjY2em0xNC41ODMgMHYxLjM5aDIuMDg0di0xLjM5aC0yLjA4NHpNNS4wOSAxMy45MjhMMy42MTYgMTUuNGwuOTgyLjk4MiAxLjQ3My0xLjQ3My0uOTgyLS45ODJ6bTkuODIwIDBsLS45ODIuOTgyIDEuNDczIDEuNDczLjk4Mi0uOTgyLTEuNDczLTEuNDczeiIgLz4KPC9zdmc+"); /* Sun icon */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* Dark Theme: Moon Icon */
+[data-theme="dark"] .slider .circle {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTEwIDJhOCA4IDAgMTAwIDE2IDggOCAwIDAwMC0xNnptMCAxLjVhNi41IDYuNSAwIDExMCAxMyA2LjUgNi41IDAgMDEwLTEzeiIgLz4KPC9zdmc+"); /* Moon icon */
+}
+
+/* Ensure images and other elements adapt to the theme */
+img {
+    filter: brightness(var(--image-brightness, 100%));
+}
+
+[data-theme="dark"] img {
+    --image-brightness: 80%;
 }

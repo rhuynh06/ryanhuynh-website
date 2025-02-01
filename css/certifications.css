@@ -1,0 +1,104 @@
+/* Certifications Section */
+#certifications {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.certifications-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Certificate Card */
+.certificate-card {
+    background-color: transparent;
+    width: 45%;
+    height: 250px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+/* Card Inner Container */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Flip the card when the parent has the "flipped" class */
+.certificate-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front and Back of the Card */
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Front of the Card */
+.card-front {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-front img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+/* Back of the Card */
+.card-back {
+    background-color: #f9f9f9;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.card-back h4 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.card-back p {
+    margin: 0 0 15px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.card-back a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.card-back a:hover {
+    background-color: #0056b3;
+}

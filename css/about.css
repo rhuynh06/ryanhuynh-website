@@ -1,0 +1,32 @@
+#about h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text li {
+    list-style-type: "▷";
+    margin-left: 1em;
+    padding-inline: 1ch;
+}
+
+.about-text li::marker{
+    color: #00BFFF;
+}
+
+.image-container img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #3498db;
+}
