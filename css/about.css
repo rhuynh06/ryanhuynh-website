@@ -24,6 +24,7 @@
 }
 
 .image-container img {
+    margin-right: 25px;
     border-radius: 50%;
     width: 150px;
     height: 150px;
