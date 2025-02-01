@@ -57,7 +57,23 @@
     color: #00BFFF;
 }
 
-.project-item img {
+.tools a {
+    text-decoration: none;
+}
+
+.proof {
+    display: block;
+    margin-bottom: 10px;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.tools {
+    display: flex;
+    gap: 10px;
+}
+
+.tools img {
     height: 25px;
     width: auto;
 }
