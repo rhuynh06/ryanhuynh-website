@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateGitHubIcon() {
         if (document.documentElement.getAttribute('data-theme') === 'dark') {
-            githubIcon.src = 'images/github2.png';
+            githubIcon.src = 'images/icons/github2.png';
         } else {
-            githubIcon.src = 'images/github1.png';
+            githubIcon.src = 'images/icons/github1.png';
         }
     }
 
