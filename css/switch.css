@@ -178,15 +178,20 @@ a:hover {
 /* Code Blocks */
 pre {
     background-color: var(--code-background);
-    padding: 15px;
+    padding: 10px;
     border-radius: 8px;
     overflow-x: auto;
 }
 
 code {
-    color: var(--code-text);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 1rem;
+    background-color: AliceBlue;
+    padding: 1px 3px;
+    border-radius: 4px;
+    color: LightCoral;
+    word-wrap: break-word;
+    display: inline-block;
 }
 
 /* Buttons */
