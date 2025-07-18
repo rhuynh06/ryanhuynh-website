@@ -7,6 +7,7 @@ interface TechLogo {
 
 export interface ProjectCardProps {
   name: string;
+  role: string;
   desc: string;
   techStack: TechLogo[];
   imageUrl: string;
@@ -14,6 +15,7 @@ export interface ProjectCardProps {
 
 export function ProjectCard({
   name,
+  role,
   desc,
   techStack,
   imageUrl,
@@ -38,7 +40,8 @@ export function ProjectCard({
             className="w-full h-28 object-cover rounded-md mb-2"
           />
           <h3 className="text-lg font-semibold">{name}</h3>
-          <div className="flex gap-2 mt-2">
+          <h2 className="text-sm font-medium">{role}</h2>
+          <div className="flex justify-center gap-2 mt-2">
             {techStack.map((logo, i) => (
               <img
                 key={i}
