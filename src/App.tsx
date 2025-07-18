@@ -1,72 +1,97 @@
 import './App.css';
+import ContactPanel from './components/ContactPanel';
 import { ProjectCard } from './components/ProjectCard';
-import { Button } from './components/ui/button';
-import { Card, CardContent } from './components/ui/card';
 import { projects } from './data/projects';
 
 function App() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10 space-y-12">
+    <div className="max-w-6xl mx-auto space-y-0">
+
       {/* Header */}
-      <header className="text-center">
+      <header className="text-center p-6 top-0 z-30">
         <h1 className="text-4xl font-bold">Ryan's Portfolio</h1>
+        <nav className="flex justify-center gap-6 mt-4">
+          <a
+            href="#about"
+            className="btn px-4 py-2 rounded bg-primary text-white hover:bg-primary-dark transition"
+          >
+            About Me
+          </a>
+          <a
+            href="#experience"
+            className="btn px-4 py-2 rounded bg-primary text-white hover:bg-primary-dark transition"
+          >
+            Experience
+          </a>
+          <a
+            href="#projects"
+            className="btn px-4 py-2 rounded bg-primary text-white hover:bg-primary-dark transition"
+          >
+            Projects
+          </a>
+          <a
+            href="#certificates"
+            className="btn px-4 py-2 rounded bg-primary text-white hover:bg-primary-dark transition"
+          >
+            Certificates
+          </a>
+        </nav>
       </header>
 
-      {/* Bio */}
-      <section className="text-center space-y-4">
-        <img src="pfp.png" alt="Ryan's profile photo" className="w-auto h-32 rounded-full mx-auto border-4 border-primary" />
-        <p className="text-lg max-w-2xl mx-auto">
-          I'm a full-stack developer passionate about building impactful, AI-powered applications. I love turning ideas into fast, user-friendly tools.
+      {/* Bio Section */}
+      <section
+        id="about"
+        className="min-h-screen flex flex-col justify-center items-center text-center p-8 mb-4"
+      >
+        <img
+          src="pfp.png"
+          alt="Ryan's profile photo"
+          className="w-auto h-32 rounded-full border-4 border-primary mb-6"
+        />
+        <p className="text-lg max-w-2xl">
+          I'm a full-stack developer passionate about building impactful, AI-powered
+          applications. I love turning ideas into fast, user-friendly tools.
         </p>
       </section>
 
-      {/* Experience */}
-      <section>
-        <h2 className="text-2xl font-bold text-center mb-4">Experience</h2>
-        <p className="text-center text-muted-foreground">Coming soon...</p>
+      {/* Experience Section */}
+      <section
+        id="experience"
+        className="min-h-screen flex flex-col justify-center items-center text-center p-8 mb-4"
+      >
+        <h2 className="text-2xl font-bold mb-4">Experience</h2>
+        <p className="text-muted-foreground max-w-xl">Coming soon...</p>
       </section>
 
-      {/* Projects */}
-      <section>
-        <h2 className="text-2xl font-bold text-center mb-6">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Projects Section */}
+      <section
+        id="projects"
+        className="min-h-screen flex flex-col justify-center items-center text-center p-8 mb-4"
+      >
+        <h2 className="text-2xl font-bold mb-6">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center w-full px-4">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
         </div>
       </section>
 
-      {/* Contact Info */}
-      <section>
-        <h2 className="text-2xl font-bold text-center mb-4">Get in Touch</h2>
-        <Card className="max-w-md mx-auto">
-          <CardContent className="p-6 space-y-4">
-            <div className="flex items-center gap-3">
-            <img src="src/assets/contact/gmail.svg" alt="Gmail Icon" className="w-6 h-auto"/>
-              <a href="mailto:ryanhuynh200604@gmail.com" className="text-sm hover:text-primary">
-                ryanhuynh200604@gmail.com
-              </a>
-            </div>
-            <div className="flex items-center gap-3">
-              <img src="src/assets/contact/github.svg" alt="Github Icon" className="w-6 h-6"/>
-              <a href="https://github.com/rhuynh06" target="_blank" className="text-sm hover:text-primary">
-                @rhuynh06
-              </a>
-            </div>
-            <div className="flex items-center gap-3">
-              <img src="src/assets/contact/linkedin.svg" alt="LinkedIn Icon" className="w-6 h-6"/>
-              <a href="https://www.linkedin.com/in/ryan-huynh-937916248/" target="_blank" className="text-sm hover:text-primary">
-                LinkedIn
-              </a>
-            </div>
-            <div className="pt-4">
-              <Button variant="outline" className="w-full" asChild>
-                <a href="mailto:ryanhuynh200604@gmail.com">Email Me</a>
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
+      {/* Certificates */}
+      <section
+        id="certificates"
+        className="min-h-screen flex flex-col justify-center items-center text-center p-8 mb-4"
+      >
+        <h2 className="text-2xl font-bold mb-4">Certificates</h2>
+        <p className="text-muted-foreground max-w-xl">Coming soon...</p>
       </section>
+
+      {/* Contact Section */}
+      <ContactPanel />
+
+      {/* Footer */}
+      <footer className="w-full text-center pt-10">
+        © {new Date().getFullYear()} Ryan Huynh. All Rights Reserved.
+      </footer>
     </div>
   );
 }
