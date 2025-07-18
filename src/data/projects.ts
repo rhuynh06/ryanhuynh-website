@@ -3,6 +3,7 @@ export const projects = [
     name: "Task Manager",
     role: "Full-stack Developer",
     desc: "A productivity web app that helps users create, organize, and prioritize daily tasks with persistent tracking.",
+    websiteLink: "https://rhuynh06.github.io/task-manager/",
     imageUrl: "src/assets/projects/task.png",
     techStack: [
       { name: "JavaScript", url: "src/assets/tech/js.svg" },
@@ -14,6 +15,7 @@ export const projects = [
     name: "Pokédex",
     role: "Full-stack Developer",
     desc: "An interactive encyclopedia that lets users search, filter, and explore Pokémon with rich visuals and responsive design.",
+    websiteLink: "https://rhuynh06.github.io/pokedex/",
     imageUrl: "src/assets/projects/pokedex.png",
     techStack: [
       { name: "JavaScript", url: "src/assets/tech/js.svg" },
@@ -25,6 +27,7 @@ export const projects = [
     name: "Fitness Surfers",
     role: "Lead Embedded Systems Developer",
     desc: "A motion-controlled fitness game that uses body movement to control an arcade character in real time.",
+    websiteLink: "https://devpost.com/software/fitness-surfers",
     imageUrl: "src/assets/projects/fitness.png",
     techStack: [
       { name: "Pygame", url: "src/assets/tech/pygame.svg" },
@@ -36,6 +39,7 @@ export const projects = [
     name: "Note Ninjas",
     role: "Lead Full-stack Developer",
     desc: "A cloud-based app that turns notes into flashcards and study guides using generative AI.",
+    websiteLink: "https://devpost.com/software/ai-study-guide-generator-0hrlm1",
     imageUrl: "src/assets/projects/study-ninjas.png",
     techStack: [
       { name: "React", url: "src/assets/tech/react.svg" },
@@ -52,6 +56,7 @@ export const projects = [
     name: "MNIST AI Digit Predictor",
     role: "Full-stack Developer",
     desc: "A live web app that predicts user-drawn digits using an AI model trained on MNIST.",
+    websiteLink: "https://rhuynh06.github.io/digit-predictor/",
     imageUrl: "src/assets/projects/digits.png",
     techStack: [
       { name: "TensorFlow", url: "src/assets/tech/tensorflow.svg" },
@@ -65,6 +70,7 @@ export const projects = [
     name: "LevelNotes",
     role: "Full-stack Developer",
     desc: "A gamified note-taking app that rewards users as they write, helping boost focus and productivity.",
+    websiteLink: "https://rhuynh06.github.io/notes-app/",
     imageUrl: "src/assets/projects/notes.png",
     techStack: [
       { name: "React", url: "src/assets/tech/react.svg" },
@@ -78,6 +84,7 @@ export const projects = [
     name: "My2048",
     role: "Full-stack Developer",
     desc: "An AI-powered version of the 2048 game with hints, autoplay, and customizable visuals.",
+    websiteLink: "https://rhuynh06.github.io/My2048/",
     imageUrl: "src/assets/projects/2048.png",
     techStack: [
       { name: "React", url: "src/assets/tech/react.svg" },
@@ -90,6 +97,7 @@ export const projects = [
     name: "YummiBook",
     role: "Lead Full-stack Developer",
     desc: "A recipe manager that lets users browse, edit, and filter recipes by diet, cuisine, and more.",
+    websiteLink: "https://rhuynh06.github.io/YummiBook/",
     imageUrl: "src/assets/projects/yummibook.png",
     techStack: [
       { name: "React", url: "src/assets/tech/react.svg" },
@@ -104,6 +112,7 @@ export const projects = [
     name: "AwakenChat",
     role: "Full-stack Developer",
     desc: "A real-time chat platform with audio/video calls, file sharing, and role-based server management.",
+    websiteLink: "https://chat-app-i84j.onrender.com",
     imageUrl: "src/assets/projects/awakenchat.png",
     techStack: [
       { name: "Next.js", url: "src/assets/tech/nextjs.svg" },

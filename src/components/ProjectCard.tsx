@@ -10,6 +10,7 @@ export interface ProjectCardProps {
   role: string;
   desc: string;
   techStack: TechLogo[];
+  websiteLink: string;
   imageUrl: string;
 }
 
@@ -18,6 +19,7 @@ export function ProjectCard({
   role,
   desc,
   techStack,
+  websiteLink,
   imageUrl,
 }: ProjectCardProps) {
   const [flipped, setFlipped] = useState(false);
@@ -39,7 +41,18 @@ export function ProjectCard({
             alt={name}
             className="w-full h-28 object-cover rounded-md mb-2"
           />
-          <h3 className="text-lg font-semibold">{name}</h3>
+          <h3
+            className="text-lg font-semibold text-blue-600 hover:underline"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <a
+              href={websiteLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {name}
+            </a>
+          </h3>
           <h2 className="text-sm font-medium">{role}</h2>
           <div className="flex justify-center gap-2 mt-2">
             {techStack.map((logo, i) => (
