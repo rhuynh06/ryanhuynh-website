@@ -178,9 +178,8 @@ export function LoadingScreen() {
 
   return (
     <div className="fixed inset-0 z-[9999] bg-black text-green-400 font-mono overflow-hidden select-none">
-      {/* Matrix background */}
       <div
-        className="absolute inset-0 z-0 pointer-events-none opacity-10 bg-[url('/bg/matrix.svg')] bg-cover animate-pulse"
+        className="absolute inset-0 z-0 pointer-events-none opacity-10 bg-cover animate-pulse"
         aria-hidden="true"
       />
 
