@@ -42,7 +42,7 @@ export function LiveTyping({ phrases }: LiveTypingProps) {
   return (
     <span className="text-green-400">
       {text}
-      <span className="border-r-2 border-black animate-blink ml-1"></span>
+      <span className="border-r-2 border-green-400 animate-blink ml-1"></span>
     </span>
   );
 }
