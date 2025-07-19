@@ -10,7 +10,8 @@ export const languages: { name: string; level: Level }[] = [
   { name: "Vietnamese (Fluent)", level: "green" },
   { name: "SQL", level: "yellow" },
   { name: "PHP", level: "yellow" },
-  { name: "Java", level: "yellow" }
+  { name: "Java", level: "yellow" },
+  { name: "Spanish (Elementary)", level: "gray" }
 ];
 
 export const frameworks: { name: string; level: Level }[] = [

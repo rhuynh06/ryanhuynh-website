@@ -103,7 +103,7 @@ function App() {
             </div>
 
             <div>
-              <p className="font-semibold mb-2">Frameworks / Libraries</p>
+              <p className="font-semibold mb-2">Frameworks & Libraries</p>
               <div className="flex flex-wrap">
                 {frameworks.map((framework, i) => (
                   <Tag key={i} {...framework} />
@@ -112,7 +112,7 @@ function App() {
             </div>
 
             <div>
-              <p className="font-semibold mb-2">Tools</p>
+              <p className="font-semibold mb-2">Tools & Services</p>
               <div className="flex flex-wrap">
                 {tools.map((tool, i) => (
                   <Tag key={i} {...tool} />
