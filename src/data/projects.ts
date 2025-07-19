@@ -76,7 +76,7 @@ export const projects = [
     role: "Full-stack Developer",
     desc: "A gamified note-taking app that rewards users as they write, helping boost focus and productivity.",
     websiteLink: "https://rhuynh06.github.io/LevelNotes/",
-    imageUrl: "/projects/levelnotes.png",
+    imageUrl: "/projects/LevelNotes.png",
     githubUrl: "https://github.com/rhuynh06/LevelNotes",
     techStack: [
       { name: "React", url: "/tech/react.svg" },
@@ -91,7 +91,7 @@ export const projects = [
     role: "Full-stack Developer",
     desc: "An AI-powered version of the 2048 game with hints, autoplay, and customizable visuals.",
     websiteLink: "https://rhuynh06.github.io/My2048/",
-    imageUrl: "/projects/my2048.png",
+    imageUrl: "/projects/My2048.png",
     githubUrl: "https://github.com/rhuynh06/My2048",
     techStack: [
       { name: "React", url: "/tech/react.svg" },
@@ -105,7 +105,7 @@ export const projects = [
     role: "Lead Full-stack Developer",
     desc: "A recipe manager that lets users browse, edit, and filter recipes by diet, cuisine, and more.",
     websiteLink: "https://rhuynh06.github.io/YummiBook/",
-    imageUrl: "/projects/yummibook.png",
+    imageUrl: "/projects/YummiBook.png",
     githubUrl: "https://github.com/rhuynh06/YummiBook",
     techStack: [
       { name: "React", url: "/tech/react.svg" },
@@ -121,7 +121,7 @@ export const projects = [
     role: "Full-stack Developer",
     desc: "A real-time chat platform with audio/video calls, file sharing, and role-based server management.",
     websiteLink: "https://awaken-chat-pcrr.vercel.app/",
-    imageUrl: "/projects/awakenchat.png",
+    imageUrl: "/projects/AwakenChat.png",
     githubUrl: "https://github.com/rhuynh06/AwakenChat",
     techStack: [
       { name: "Next.js", url: "/tech/nextjs.svg" },
