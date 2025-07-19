@@ -135,6 +135,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .perspective {
   perspective: 1000px;
 }
