@@ -1,57 +1,186 @@
 import './App.css';
 import ContactPanel from './components/ContactPanel';
+import { LiveTyping } from './components/LiveTyping';
 import { ProjectCard } from './components/ProjectCard';
 import { projects } from './data/projects';
 
 function App() {
+  const introPhrases = [
+    "I'm a full-stack developer passionate about building impactful, AI-powered applications.",
+    "I love turning ideas into fast, user-friendly tools.",
+    "Always learning and improving with new technologies."
+  ];
+
   return (
     <div className="max-w-6xl mx-auto space-y-0">
 
       {/* Header */}
-      <header className="text-center p-6 top-0 z-30">
-        <h1 className="text-4xl font-bold">Ryan's Portfolio</h1>
-        <nav className="flex justify-center gap-6 mt-4">
-          <a
-            href="#about"
-            className="btn px-4 py-2 rounded bg-primary text-white hover:bg-primary-dark transition"
-          >
-            About Me
-          </a>
-          <a
-            href="#experience"
-            className="btn px-4 py-2 rounded bg-primary text-white hover:bg-primary-dark transition"
-          >
-            Experience
-          </a>
-          <a
-            href="#projects"
-            className="btn px-4 py-2 rounded bg-primary text-white hover:bg-primary-dark transition"
-          >
-            Projects
-          </a>
-          <a
-            href="#certificates"
-            className="btn px-4 py-2 rounded bg-primary text-white hover:bg-primary-dark transition"
-          >
-            Certificates
-          </a>
-        </nav>
-      </header>
+      <section className="min-h-screen flex items-center p-6 top-0 z-30 max-w-6xl mx-auto">
+        <div className="basis-3/4 flex flex-col space-y-4 max-w-full">
+          <div className="space-y-2 text-left">
+            <h3 className="text-lg font-light">hi! i am</h3>
+            <h1 className="text-4xl font-bold leading-tight">Ryan Huynh</h1>
+            <h2 className="text-xl font-medium">
+              I am a programmer who <LiveTyping phrases={introPhrases} />
+            </h2>
+          </div>
 
-      {/* Bio Section */}
+          <nav className="flex flex-wrap gap-4 mt-4">
+            <a
+              href="#info"
+              className="btn px-4 py-2 rounded-4xl bg-primary text-white hover:bg-primary-dark transition"
+            >
+              About Me
+            </a>
+            <a
+              href="#experience"
+              className="btn px-4 py-2 rounded-4xl bg-primary text-white hover:bg-primary-dark transition"
+            >
+              Experience
+            </a>
+            <a
+              href="#projects"
+              className="btn px-4 py-2 rounded-4xl bg-primary text-white hover:bg-primary-dark transition"
+            >
+              Projects
+            </a>
+            <a
+              href="#certificates"
+              className="btn px-4 py-2 rounded-4xl bg-primary text-white hover:bg-primary-dark transition"
+            >
+              Certificates
+            </a>
+          </nav>
+        </div>
+
+        <div className="basis-1/4 flex justify-center">
+          <img
+            src="pfp.png"
+            alt="Ryan's profile photo"
+            className="w-auto h-64 rounded-full border-4 border-primary"
+          />
+        </div>
+      </section>
+
+      {/* Info */}
       <section
-        id="about"
+        id="info"
         className="min-h-screen flex flex-col justify-center items-center text-center p-8 mb-4"
       >
-        <img
-          src="pfp.png"
-          alt="Ryan's profile photo"
-          className="w-auto h-32 rounded-full border-4 border-primary mb-6"
-        />
-        <p className="text-lg max-w-2xl">
-          I'm a full-stack developer passionate about building impactful, AI-powered
-          applications. I love turning ideas into fast, user-friendly tools.
-        </p>
+
+        <div className="flex flex-col lg:flex-row gap-12 w-full max-w-6xl text-left">
+          
+          <div className="flex-1 space-y-4">
+            <h3 className="text-2xl font-bold mb-4 underline">about me</h3>
+            <p>
+              I'm an undergraduate student interested in artificial intelligence, machine learning,
+              and how technology can help solve real-world problems.
+            </p>
+            <p>
+              I'm currently learning by building projects, exploring different tools in the AI ecosystem,
+              and trying to understand how things work under the hood.
+            </p>
+            <p>
+              I'm looking for internship opportunities, mentorship, and chances to collaborate with others
+              who are curious and motivated.
+            </p>
+          </div>
+
+          <div className="flex-1 space-y-6">
+            <h3 className="text-2xl font-bold underline">skills & technologies</h3>
+
+            <div>
+              <p className="font-semibold mb-2">Languages</p>
+              <div className="flex flex-wrap">
+                {[
+                  { name: "Python", level: "green" },
+                  { name: "C++", level: "green" },
+                  { name: "JavaScript", level: "green" },
+                  { name: "TypeScript", level: "green" },
+                  { name: "HTML/CSS", level: "green" },
+                  { name: "English (Fluent)", level: "green" },
+                  { name: "Vietnamese (Fluent)", level: "green" },
+                  { name: "SQL", level: "yellow" },
+                  { name: "PHP", level: "yellow" },
+                  { name: "Java", level: "yellow" }
+                ].map(({ name, level }) => (
+                  <div
+                    key={name}
+                    className={`py-1 px-3 rounded-xl m-1 flex items-center h-8 text-sm font-semibold
+                      ${level === "green" ? "bg-green-100 border border-green-400 text-green-800" :
+                        level === "yellow" ? "bg-yellow-100 border border-yellow-400 text-yellow-800" :
+                        "bg-gray-100 border border-gray-400 text-gray-800"}`}
+                  >
+                    {name}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <p className="font-semibold mb-2">Frameworks / Libraries</p>
+              <div className="flex flex-wrap">
+                {[
+                  { name: "Flask", level: "green" },
+                  { name: "Tailwind CSS", level: "green" },
+                  { name: "Next.js", level: "green" },
+                  { name: "React", level: "green" },
+                  { name: "Node.js", level: "yellow" },
+                  { name: "Express", level: "yellow" },
+                  { name: "FastAPI", level: "yellow" },
+                  { name: "Django", level: "gray" },
+                  { name: "PyTorch", level: "gray" },
+                  { name: "TensorFlow", level: "gray" },
+                  { name: "NumPy", level: "gray" },
+                  { name: "Scikit-Learn", level: "gray" }
+                ].map(({ name, level }) => (
+                  <div
+                    key={name}
+                    className={`py-1 px-3 rounded-xl m-1 flex items-center h-8 text-sm font-semibold
+                      ${level === "green" ? "bg-green-100 border border-green-400 text-green-800" :
+                        level === "yellow" ? "bg-yellow-100 border border-yellow-400 text-yellow-800" :
+                        "bg-gray-100 border border-gray-400 text-gray-800"}`}
+                  >
+                    {name}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <p className="font-semibold mb-2">Tools</p>
+              <div className="flex flex-wrap">
+                {[
+                  { name: "GitHub", level: "green" },
+                  { name: "MySQL", level: "green" },
+                  { name: "VSCode", level: "green" },
+                  { name: "Supabase", level: "green" },
+                  { name: "Clerk Auth", level: "green" },
+                  { name: "Docker", level: "yellow" },
+                  { name: "Amplify", level: "yellow" },
+                  { name: "SQLAlchemy", level: "yellow" },
+                  { name: "Prisma", level: "yellow" },
+                  { name: "Bedrock", level: "yellow" },
+                  { name: "Postgres", level: "yellow" },
+                  { name: "Polly", level: "gray" },
+                  { name: "MongoDB", level: "gray" },
+                  { name: "Arduino", level: "gray" }
+                ].map(({ name, level }) => (
+                  <div
+                    key={name}
+                    className={`py-1 px-3 rounded-xl m-1 flex items-center h-8 text-sm font-semibold
+                      ${level === "green" ? "bg-green-100 border border-green-400 text-green-800" :
+                        level === "yellow" ? "bg-yellow-100 border border-yellow-400 text-yellow-800" :
+                        "bg-gray-100 border border-gray-400 text-gray-800"}`}
+                  >
+                    {name}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+        </div>
       </section>
 
       {/* Experience Section */}
@@ -61,6 +190,7 @@ function App() {
       >
         <h2 className="text-2xl font-bold mb-4">Experience</h2>
         <p className="text-muted-foreground max-w-xl">Coming soon...</p>
+        <h3>Related Coursework</h3>
       </section>
 
       {/* Projects Section */}
