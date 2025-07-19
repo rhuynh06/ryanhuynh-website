@@ -37,7 +37,12 @@ export function ProjectCard({
         }`}
       >
         {/* Front */}
-        <div className="absolute w-full h-full backface-hidden bg-white border border-blue-100 rounded-2xl shadow-xl p-4 overflow-hidden">
+        <div className="absolute w-full h-full backface-hidden
+          bg-white dark:bg-gray-900
+          border border-blue-100 dark:border-green-600
+          rounded-2xl shadow-xl p-4 overflow-hidden
+          transition-colors duration-300"
+        >
           <a
             href={websiteLink}
             target="_blank"
@@ -54,7 +59,9 @@ export function ProjectCard({
           </a>
 
           <h3
-            className="text-lg font-bold text-blue-700 hover:underline truncate text-center"
+            className="text-lg font-bold
+              text-blue-700 dark:text-green-400
+              hover:underline truncate text-center"
             onClick={(e) => e.stopPropagation()}
           >
             <a href={githubUrl} target="_blank" rel="noopener noreferrer">
@@ -62,7 +69,12 @@ export function ProjectCard({
             </a>
           </h3>
 
-          <h2 className="text-sm font-medium text-gray-700 text-center">{role}</h2>
+          <h2 className="text-sm font-medium
+            text-gray-700 dark:text-green-300
+            text-center"
+          >
+            {role}
+          </h2>
 
           <div className="flex justify-center gap-3 mt-3 flex-wrap">
             {techStack.map((logo, i) => (
@@ -78,8 +90,20 @@ export function ProjectCard({
         </div>
 
         {/* Back */}
-        <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-blue-100 via-white to-pink-100 border border-blue-100 rounded-2xl shadow-xl p-4 flex items-center justify-center text-center">
-          <p className="text-sm text-blue-900 font-medium">{desc}</p>
+        <div
+          className="absolute w-full h-full backface-hidden rotate-y-180
+            bg-gradient-to-br from-blue-100 via-white to-pink-100
+            dark:from-green-900 dark:via-black dark:to-green-800
+            border border-blue-100 dark:border-green-600
+            rounded-2xl shadow-xl p-4 flex items-center justify-center text-center
+            transition-colors duration-300"
+        >
+          <p className="text-sm
+            text-blue-900 dark:text-green-400
+            font-medium"
+          >
+            {desc}
+          </p>
         </div>
       </div>
     </div>

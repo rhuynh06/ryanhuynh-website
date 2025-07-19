@@ -40,9 +40,9 @@ export function LiveTyping({ phrases }: LiveTypingProps) {
   }, [charIndex, deleting, phraseIndex, phrases]);
 
   return (
-    <span className="text-green-400">
+    <span className="text-blue-600 dark:text-green-400">
       {text}
-      <span className="border-r-2 border-green-400 animate-blink ml-1"></span>
+      <span className="border-r-2 border-blue-600 dark:border-green-400 animate-blink ml-1"></span>
     </span>
   );
 }

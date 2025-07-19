@@ -1,42 +1,71 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Base button style */
+.btn {
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px; /* rounded-4xl */
+  transition: all 0.3s ease;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Light mode button waves (subtle blue) */
+.btn-light::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(59,130,246,0.3) 0%, transparent 70%);
+  animation: light-wave 4s linear infinite;
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.5;
+  border-radius: inherit;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Dark mode button neon green waves */
+.btn-dark::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(161,255,10,0.4) 0%, transparent 70%);
+  animation: neon-wave 3s linear infinite;
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.7;
+  border-radius: inherit;
+}
+
+/* Keyframes for light wave animation */
+@keyframes light-wave {
+  0% {
+    transform: translateX(-100%) translateY(0);
+    opacity: 0.5;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateX(100%) translateY(0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(-100%) translateY(0);
+    opacity: 0.5;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Keyframes for neon green wave animation */
+@keyframes neon-wave {
+  0% {
+    transform: translateX(-100%) translateY(0);
+    opacity: 0.7;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  50% {
+    transform: translateX(100%) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%) translateY(0);
+    opacity: 0.7;
+  }
 }

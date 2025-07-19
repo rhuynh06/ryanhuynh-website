@@ -29,16 +29,20 @@ function App() {
   ];
 
   const navButtonClasses =
-    "btn px-5 py-2 rounded-4xl bg-blue-600 text-white hover:bg-blue-700 transition dark:bg-blue-400 dark:text-gray-900 dark:hover:bg-blue-500";
+    "btn px-5 py-2 rounded-4xl transition relative overflow-hidden " +
+    "bg-blue-500 text-white border border-blue-400 shadow-md " + 
+    "hover:bg-blue-600 hover:shadow-lg " + 
+    "dark:bg-[#0f380f] dark:text-[#a1ff0a] dark:border-[#56ff1b] dark:shadow-green-500 dark:hover:shadow-[0_0_20px_#a1ff0a] " +
+    "btn-light dark:btn-dark";
 
   return (
    <div className="max-w-6xl mx-auto space-y-0">
 
       {/* Header */}
-      <section className="min-h-screen flex items-center p-6 top-0 max-w-6xl mx-auto">
+      <section className="min-h-screen flex items-center p-6 lg:pl-[72px] max-w-6xl mx-auto">
         <div className="basis-2/4 flex flex-col space-y-4 max-w-[60%] text-left break-words">
           <h3 className="text-lg font-semibold">hi! i am</h3>
-          <h1 className="text-4xl font-bold leading-tight">Ryan Huynh</h1>
+          <h1 className="text-3xl font-bold mb-6 decoration-2 dark:text-green-400 dark:drop-shadow-[0_0_10px_rgba(161,255,10,0.9)] transition-colors duration-300">Ryan Huynh</h1>
           <h2 className="text-xl font-medium max-w-full">
             I am a programmer who is <LiveTyping phrases={introPhrases} />
           </h2>
@@ -68,37 +72,43 @@ function App() {
       >
         <div className="flex flex-col lg:flex-row gap-12 w-full max-w-6xl text-left">
           <div className="flex-1 space-y-6">
-            <h3 className="text-3xl font-bold mb-6 underline decoration-2 underline-offset-4">
+            <h3 
+              className="text-3xl font-bold mb-6 underline decoration-2 underline-offset-4 dark:text-green-400 dark:drop-shadow-[0_0_10px_rgba(161,255,10,0.9)] transition-colors duration-300"
+            >
               about me
             </h3>
-            <div className="space-y-5 text-lg leading-relaxed">
-                <p>
-                  Hey — I'm <strong>Ryan Huynh</strong>, a Computer Science undergraduate at <strong>UC Irvine</strong> specializing in Intelligent Systems. 
-                  I'm currently diving deep into <strong>PyTorch</strong>, <strong>PostgreSQL</strong>, <strong>SQLAlchemy</strong>, and <strong>Prisma ORM</strong>, 
-                  while building AI-powered apps that aim to make everyday life just a bit easier.
-                </p>
-                <p>
-                  I'm passionate about turning ideas into polished products — blending creativity with practical problem-solving. 
-                  I love exploring the intersection of AI and full-stack development, and often find myself experimenting with tools like <strong>React</strong>, <strong>Flask</strong>, and <strong>Tailwind CSS</strong>.
-                </p>
-                <p>
-                  Outside of coding, I'm a former tri-athlete in water polo, wrestling, and swim — experiences that shaped my discipline and teamwork.
-                  These days, I recharge by spending time with family, getting outdoors, and exploring new places whenever I can.
-                </p>
-                <p>
-                  Whether it's through open source, internships, or side projects, I'm always seeking new ways to learn and grow. 
-                  If you're building something cool or just want to chat tech, feel free to reach out!
-                </p>
+            <div
+              className="space-y-5 text-lg leading-relaxed0"
+            >
+              <p>
+                Hey — I'm <strong>Ryan Huynh</strong>, a Computer Science undergraduate at <strong>UC Irvine</strong> specializing in Intelligent Systems. 
+                I'm currently diving deep into <strong>PyTorch</strong>, <strong>PostgreSQL</strong>, <strong>SQLAlchemy</strong>, and <strong>Prisma ORM</strong>, 
+                while building AI-powered apps that aim to make everyday life just a bit easier.
+              </p>
+              <p>
+                I'm passionate about turning ideas into polished products — blending creativity with practical problem-solving. 
+                I love exploring the intersection of AI and full-stack development, and often find myself experimenting with tools like <strong>React</strong>, <strong>Flask</strong>, and <strong>Tailwind CSS</strong>.
+              </p>
+              <p>
+                Outside of coding, I'm a former tri-athlete in water polo, wrestling, and swim — experiences that shaped my discipline and teamwork.
+                These days, I recharge by spending time with family, getting outdoors, and exploring new places whenever I can.
+              </p>
+              <p>
+                Whether it's through open source, internships, or side projects, I'm always seeking new ways to learn and grow. 
+                If you're building something cool or just want to chat tech, feel free to reach out!
+              </p>
             </div>
           </div>
 
           <div className="flex-1 space-y-6">
-            <h3 className="text-3xl font-bold mb-6 underline decoration-2 underline-offset-4">
+            <h3
+              className="text-3xl font-bold mb-6 underline decoration-2 underline-offset-4 dark:text-green-400 dark:drop-shadow-[0_0_10px_rgba(161,255,10,0.9)] transition-colors duration-300"
+            >
               skills & technologies
             </h3>
 
             <div>
-              <p className="font-semibold mb-3 text-lg">Languages</p>
+              <p className="font-semibold mb-3 text-lg dark:text-green-400 transition-colors duration-300">Languages</p>
               <div className="flex flex-wrap gap-3">
                 {languages.map((language, i) => (
                   <Tag key={i} {...language} />
@@ -107,7 +117,7 @@ function App() {
             </div>
 
             <div>
-              <p className="font-semibold mb-3 text-lg">Frameworks & Libraries</p>
+              <p className="font-semibold mb-3 text-lg dark:text-green-400 transition-colors duration-300">Frameworks & Libraries</p>
               <div className="flex flex-wrap gap-3">
                 {frameworks.map((framework, i) => (
                   <Tag key={i} {...framework} />
@@ -116,7 +126,7 @@ function App() {
             </div>
 
             <div>
-              <p className="font-semibold mb-3 text-lg">Tools & Services</p>
+              <p className="font-semibold mb-3 text-lg dark:text-green-400 transition-colors duration-300">Tools & Services</p>
               <div className="flex flex-wrap gap-3">
                 {tools.map((tool, i) => (
                   <Tag key={i} {...tool} />
@@ -132,7 +142,7 @@ function App() {
         id="experience"
         className="min-h-screen flex flex-col justify-center items-center text-center p-8 mb-4"
       >
-        <h2 className="text-3xl font-bold mb-6 underline decoration-2 underline-offset-4">
+        <h2 className="text-3xl font-bold mb-6 underline decoration-2 underline-offset-4 dark:text-green-400 dark:drop-shadow-[0_0_10px_rgba(161,255,10,0.9)] transition-colors duration-300">
           experience
         </h2>
         <div className="flex flex-wrap justify-center gap-6 w-full max-w-6xl mx-auto px-4 pb-5">
@@ -141,7 +151,7 @@ function App() {
           ))}
         </div>
 
-        <h3 className="text-2xl font-semibold mb-4">Related Coursework</h3>
+        <p className="font-semibold mb-3 text-lg dark:text-green-400 transition-colors duration-300">Related Coursework</p>
         <div className="flex flex-wrap justify-center max-w-5xl gap-3">
           {relatedCoursework.map(({ title, code, link }, i) => (
             <Tag
@@ -160,7 +170,7 @@ function App() {
         id="projects"
         className="min-h-screen flex flex-col justify-center items-center text-center p-8 mb-4"
       >
-        <h2 className="text-3xl font-bold mb-6 underline decoration-2 underline-offset-4">
+        <h2 className="text-3xl font-bold mb-6 underline decoration-2 underline-offset-4 dark:text-green-400 dark:drop-shadow-[0_0_10px_rgba(161,255,10,0.9)] transition-colors duration-300">
           projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center w-full px-4">
@@ -175,7 +185,7 @@ function App() {
         id="certificates"
         className="min-h-screen flex flex-col justify-center items-center text-center p-8 mb-4"
       >
-        <h2 className="text-3xl font-bold mb-6">
+        <h2 className="text-3xl font-bold mb-6 underline decoration-2 underline-offset-4 dark:text-green-400 dark:drop-shadow-[0_0_10px_rgba(161,255,10,0.9)] transition-colors duration-300">
           certificates
         </h2>
         <p className="max-w-xl bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">
