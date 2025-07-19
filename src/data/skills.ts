@@ -16,12 +16,12 @@ export const languages: { name: string; level: Level }[] = [
 
 export const frameworks: { name: string; level: Level }[] = [
   { name: "Flask", level: "green" },
+  { name: "FastAPI", level: "green" },
   { name: "Tailwind CSS", level: "green" },
   { name: "Next.js", level: "green" },
   { name: "React", level: "green" },
   { name: "Node.js", level: "yellow" },
   { name: "Express", level: "yellow" },
-  { name: "FastAPI", level: "yellow" },
   { name: "Django", level: "gray" },
   { name: "PyTorch", level: "gray" },
   { name: "TensorFlow", level: "gray" },
@@ -41,7 +41,8 @@ export const tools: { name: string; level: Level }[] = [
   { name: "Prisma", level: "yellow" },
   { name: "Bedrock", level: "yellow" },
   { name: "Postgres", level: "yellow" },
-  { name: "Polly", level: "gray" },
+  { name: "Polly", level: "yellow" },
+  { name: "Playwright", level: "gray"},
   { name: "MongoDB", level: "gray" },
   { name: "Arduino", level: "gray" }
 ];
