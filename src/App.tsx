@@ -6,7 +6,7 @@ import { LiveTyping } from './components/LiveTyping';
 import { ProjectCard } from './components/ProjectCard';
 import { Tag } from './components/Tag';
 
-import { relatedCoursework } from './data/courseWork';
+import { relatedCoursework } from './data/coursework';
 import { experiences } from './data/experiences';
 import { projects } from './data/projects';
 import { languages, frameworks, tools } from "./data/skills";
