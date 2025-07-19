@@ -20,10 +20,10 @@ export function ExperienceCard({
   return (
     <div
       onClick={() => setFlipped(!flipped)}
-      className="w-80 h-60 perspective cursor-pointer"
+      className="w-80 h-40 cursor-pointer"
     >
       <div
-        className={`relative w-auto h-[70%] transition-transform duration-700 transform-style-preserve-3d ${
+        className={`relative w-auto h-full transition-transform duration-700 transform-style-preserve-3d ${
           flipped ? "rotate-y-180" : ""
         }`}
       >

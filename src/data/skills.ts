@@ -1,4 +1,6 @@
-export const languages = [
+type Level = "green" | "yellow" | "gray";
+
+export const languages: { name: string; level: Level }[] = [
   { name: "Python", level: "green" },
   { name: "C++", level: "green" },
   { name: "JavaScript", level: "green" },
@@ -11,7 +13,7 @@ export const languages = [
   { name: "Java", level: "yellow" }
 ];
 
-export const frameworks = [
+export const frameworks: { name: string; level: Level }[] = [
   { name: "Flask", level: "green" },
   { name: "Tailwind CSS", level: "green" },
   { name: "Next.js", level: "green" },
@@ -26,7 +28,7 @@ export const frameworks = [
   { name: "Scikit-Learn", level: "gray" }
 ];
 
-export const tools = [
+export const tools: { name: string; level: Level }[] = [
   { name: "GitHub", level: "green" },
   { name: "MySQL", level: "green" },
   { name: "VSCode", level: "green" },

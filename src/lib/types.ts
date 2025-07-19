@@ -1,0 +1,1 @@
+export type Level = "blue" | "green" | "yellow" | "gray" | "red";
