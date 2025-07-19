@@ -61,14 +61,12 @@ export function ExperienceCard({
 
         {/* Back */}
         <div
-          className="
-            absolute w-full h-full backface-hidden rotate-y-180
-            bg-gray-100 dark:bg-gray-800
+          className="absolute w-full h-full backface-hidden rotate-y-180
+            bg-gradient-to-br from-blue-100 via-white to-pink-100
+            dark:from-green-900 dark:via-black dark:to-green-800
             border border-blue-100 dark:border-green-600
-            rounded-lg shadow-md dark:shadow-green-800
-            p-4 flex items-center justify-center
-            transition-colors duration-300
-          "
+            rounded-2xl shadow-xl p-4 flex items-center justify-center text-center
+            transition-colors duration-300"
         >
           <p className="text-sm text-gray-800 dark:text-green-400 text-center">
             {desc}
