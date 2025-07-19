@@ -68,7 +68,7 @@ export default function ContactPanel() {
         <img
           src="/contact/gmail.svg"
           alt="Gmail"
-          className="w-10 hover:opacity-70 transition"
+          className="w-10 transition transform hover:-translate-y-1 hover:opacity-80 duration-200"
         />
       </a>
       <a
@@ -80,7 +80,7 @@ export default function ContactPanel() {
         <img
           src={dark ? "/contact/github_dark.png" : "/contact/github_light.svg"}
           alt="GitHub"
-          className="w-8 hover:opacity-70 transition"
+          className="w-8 transition transform hover:-translate-y-1 hover:opacity-80 duration-200"
         />
       </a>
       <a
@@ -92,7 +92,7 @@ export default function ContactPanel() {
         <img
           src="/contact/linkedin.svg"
           alt="LinkedIn"
-          className="w-8 hover:opacity-70 transition"
+          className="w-8 transition transform hover:-translate-y-1 hover:opacity-80 duration-200"
         />
       </a>
       <div className="hidden lg:flex">

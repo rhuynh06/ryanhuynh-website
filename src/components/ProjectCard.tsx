@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { cn } from "../lib/utils";
 
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+} from "../components/ui/tooltip";
+
 interface TechLogo {
   name?: string;
   url: string;
@@ -35,6 +41,7 @@ export function ProjectCard({
     "LiveKit",
     "Next.js",
     "Socket.io",
+    "SQLAlchemy"
   ]);
 
   return (
@@ -48,7 +55,8 @@ export function ProjectCard({
         }`}
       >
         {/* Front */}
-        <div className="absolute w-full h-full backface-hidden
+        <div
+          className="absolute w-full h-full backface-hidden
           bg-white dark:bg-gray-900
           border border-blue-100 dark:border-green-600
           rounded-2xl shadow-xl p-4 overflow-hidden
@@ -80,7 +88,8 @@ export function ProjectCard({
             </a>
           </h3>
 
-          <h2 className="text-sm font-medium
+          <h2
+            className="text-sm font-medium
             text-gray-700 dark:text-green-300
             text-center"
           >
@@ -89,16 +98,23 @@ export function ProjectCard({
 
           <div className="flex justify-center gap-3 mt-3 flex-wrap">
             {techStack.map((logo, i) => (
-              <img
-                key={i}
-                src={logo.url}
-                alt={logo.name}
-                title={logo.name}
-                className={cn(
-                  "w-6 h-6 hover:scale-110 transition-transform",
-                  logo.name && invertLogos.has(logo.name) ? "dark:invert" : ""
-                )}
-              />
+              <Tooltip key={i}>
+                <TooltipTrigger asChild>
+                  <img
+                    src={logo.url}
+                    alt={logo.name || "Tech logo"}
+                    className={cn(
+                      "w-6 h-6 hover:scale-110 transition-transform cursor-pointer",
+                      logo.name && invertLogos.has(logo.name)
+                        ? "dark:invert"
+                        : ""
+                    )}
+                  />
+                </TooltipTrigger>
+                <TooltipContent side="top" align="center" className="max-w-xs">
+                  {logo.name || "Tech"}
+                </TooltipContent>
+              </Tooltip>
             ))}
           </div>
         </div>
@@ -112,7 +128,8 @@ export function ProjectCard({
             rounded-2xl shadow-xl p-4 flex items-center justify-center text-center
             transition-colors duration-300"
         >
-          <p className="text-sm
+          <p
+            className="text-sm
             text-blue-900 dark:text-green-400
             font-medium"
           >

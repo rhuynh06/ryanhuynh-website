@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import './App.css';
 
 import ContactPanel from './components/ContactPanel';
@@ -10,19 +11,24 @@ import { relatedCoursework } from './data/coursework';
 import { experiences } from './data/experiences';
 import { projects } from './data/projects';
 import { languages, frameworks, tools } from "./data/skills";
+import { StatsModal } from './components/StatsModal';
+import { LoadingScreen } from './components/LoadingScreen';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const [showStats, setShowStats] = useState(false);
+
   const introPhrases = [
-    "currently deepening my skills in PyTorch, SQLAlchemy, and PostgreSQL",
-    "passionate about building tools that simplify and enhance daily life",
-    "actively seeking internships and real-world learning opportunities",
-    "driven by curiosity and a love for learning from others",
-    "excited about using AI and full-stack dev to solve meaningful problems",
-    "focused on gaining hands-on experience through building and shipping projects"
+    "currently deepening my skills in PyTorch, SQLAlchemy, and PostgreSQL.",
+    "passionate about building tools that simplify and enhance daily life.",
+    "actively seeking internships and real-world learning opportunities.",
+    "driven by curiosity and a love for learning from others.",
+    "excited about using AI and full-stack dev to solve meaningful problems.",
+    "focused on gaining hands-on experience through building and shipping projects."
   ];
 
   const navLinks = [
-    { href: "#info", label: "About Me" },
+    { href: "#about", label: "About Me" },
     { href: "#experience", label: "Experience" },
     { href: "#projects", label: "Projects" },
     { href: "#certificates", label: "Certificates" },
@@ -35,11 +41,31 @@ function App() {
     "dark:bg-[#0f380f] dark:text-[#a1ff0a] dark:border-[#56ff1b] dark:shadow-green-500 dark:hover:shadow-[0_0_20px_#a1ff0a] " +
     "btn-light dark:btn-dark";
 
+  useEffect(() => {
+    const timeout = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  useEffect(() => {
+    if (showStats) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [showStats]);
+
+  if (loading) {
+    return <LoadingScreen />;
+  }
+
   return (
    <div className="max-w-6xl mx-auto space-y-0">
 
       {/* Header */}
-      <section className="min-h-screen flex items-center p-6 lg:pl-[72px] max-w-6xl mx-auto">
+      <section className="min-h-screen flex items-center p-6 lg:pl-[72px] max-w-6xl mx-auto" data-aos="fade-up">
         <div className="basis-2/4 flex flex-col space-y-4 max-w-[60%] text-left break-words">
           <h3 className="text-lg font-semibold">hi! i am</h3>
           <h1 className="text-3xl font-bold mb-6 decoration-2 dark:text-green-400 dark:drop-shadow-[0_0_10px_rgba(161,255,10,0.9)] transition-colors duration-300">Ryan Huynh</h1>
@@ -57,17 +83,24 @@ function App() {
         </div>
 
         <div className="basis-2/4 flex justify-center">
-          <img
-            src="/pfp.png"
-            alt="Ryan's profile photo"
-            className="w-auto h-64 rounded-full border-4 border-primary"
-          />
+        {/* add when stats are worth showing */}
+         {/* <button
+            onClick={() => setShowStats(true)}
+            className="p-0 bg-transparent border-none cursor-default"
+            aria-label="Show stats"
+          > */}
+            <img
+              src="/pfp.png"
+              alt="Ryan's profile photo"
+              className="w-auto h-auto rounded-full border-3 border-black dark:border-4 dark:border-green-400 dark:shadow-[0_0_10px_#56ff1b]"
+            />
+          {/* </button> */}
         </div>
       </section>
 
       {/* Info */}
       <section
-        id="info"
+        id="about"
         className="min-h-screen flex flex-col justify-center items-center text-center p-8 mb-4"
       >
         <div className="flex flex-col lg:flex-row gap-12 w-full max-w-6xl text-left">
@@ -195,6 +228,10 @@ function App() {
 
       {/* Contact Section */}
       <ContactPanel />
+
+      {/* Conditionally render the StatsModal */}
+      {showStats && <StatsModal onClose={() => setShowStats(false)} />}
+
 
       {/* Footer */}
       <footer className="w-full text-center pt-10 pb-6 text-gray-500 dark:text-gray-400 select-none">
