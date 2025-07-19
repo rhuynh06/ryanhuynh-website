@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { cn } from "../lib/utils";
 
 interface TechLogo {
   name?: string;
@@ -25,6 +26,16 @@ export function ProjectCard({
   githubUrl,
 }: ProjectCardProps) {
   const [flipped, setFlipped] = useState(false);
+
+  const invertLogos = new Set([
+    "Flask",
+    "Express.js",
+    "Prisma",
+    "PostgreSQL",
+    "LiveKit",
+    "Next.js",
+    "Socket.io",
+  ]);
 
   return (
     <div
@@ -83,7 +94,10 @@ export function ProjectCard({
                 src={logo.url}
                 alt={logo.name}
                 title={logo.name}
-                className="w-6 h-6 hover:scale-110 transition-transform"
+                className={cn(
+                  "w-6 h-6 hover:scale-110 transition-transform",
+                  logo.name && invertLogos.has(logo.name) ? "dark:invert" : ""
+                )}
               />
             ))}
           </div>
