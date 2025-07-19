@@ -4,7 +4,7 @@ export const projects = [
     role: "Front-end Developer",
     desc: "A productivity web app that helps users create, organize, and prioritize daily tasks with persistent tracking.",
     websiteLink: "https://rhuynh06.github.io/task-manager/",
-    imageUrl: "/projects/task-manager.png",
+    imageUrl: "projects/task-manager.png",
     githubUrl: "https://github.com/rhuynh06/task-manager",
     techStack: [
       { name: "JavaScript", url: "/tech/js.svg" },
@@ -17,7 +17,7 @@ export const projects = [
     role: "Full-stack Developer",
     desc: "An interactive encyclopedia that lets users search, filter, and explore Pokémon with rich visuals and responsive design.",
     websiteLink: "https://rhuynh06.github.io/pokedex/",
-    imageUrl: "/projects/pokedex.png",
+    imageUrl: "projects/pokedex.png",
     githubUrl: "https://github.com/rhuynh06/pokedex",
     techStack: [
       { name: "JavaScript", url: "/tech/js.svg" },
@@ -30,7 +30,7 @@ export const projects = [
     role: "Lead Embedded Systems Developer",
     desc: "A motion-controlled fitness game that uses body movement to control an arcade character in real time.",
     websiteLink: "https://devpost.com/software/fitness-surfers",
-    imageUrl: "/projects/fitness-surfers.png",
+    imageUrl: "projects/fitness-surfers.png",
     githubUrl: "https://github.com/rhuynh06/FitnessSurfers",
     techStack: [
       { name: "Pygame", url: "/tech/pygame.svg" },
@@ -43,7 +43,7 @@ export const projects = [
     role: "Lead Full-stack Developer",
     desc: "A cloud-based app that turns notes into flashcards and study guides using generative AI.",
     websiteLink: "https://devpost.com/software/ai-study-guide-generator-0hrlm1",
-    imageUrl: "/projects/note-ninjas.png",
+    imageUrl: "projects/note-ninjas.png",
     githubUrl: "https://github.com/rhuynh06/NoteNinjas",
     techStack: [
       { name: "React", url: "/tech/react.svg" },
@@ -61,7 +61,7 @@ export const projects = [
     role: "Full-stack Developer",
     desc: "A live web app that predicts user-drawn digits using an AI model trained on MNIST.",
     websiteLink: "https://rhuynh06.github.io/digit-predictor/",
-    imageUrl: "/projects/digit-predictor.png",
+    imageUrl: "projects/digit-predictor.png",
     githubUrl: "https://github.com/rhuynh06/digit-predictor",
     techStack: [
       { name: "TensorFlow", url: "/tech/tensorflow.svg" },
@@ -76,7 +76,7 @@ export const projects = [
     role: "Full-stack Developer",
     desc: "A gamified note-taking app that rewards users as they write, helping boost focus and productivity.",
     websiteLink: "https://rhuynh06.github.io/LevelNotes/",
-    imageUrl: "/projects/levelnotes.png",
+    imageUrl: "projects/levelnotes.png",
     githubUrl: "https://github.com/rhuynh06/LevelNotes",
     techStack: [
       { name: "React", url: "/tech/react.svg" },
@@ -91,7 +91,7 @@ export const projects = [
     role: "Full-stack Developer",
     desc: "An AI-powered version of the 2048 game with hints, autoplay, and customizable visuals.",
     websiteLink: "https://rhuynh06.github.io/My2048/",
-    imageUrl: "/projects/my2048.png",
+    imageUrl: "projects/my2048.png",
     githubUrl: "https://github.com/rhuynh06/My2048",
     techStack: [
       { name: "React", url: "/tech/react.svg" },
@@ -105,7 +105,7 @@ export const projects = [
     role: "Lead Full-stack Developer",
     desc: "A recipe manager that lets users browse, edit, and filter recipes by diet, cuisine, and more.",
     websiteLink: "https://rhuynh06.github.io/YummiBook/",
-    imageUrl: "/projects/yummibook.png",
+    imageUrl: "projects/yummibook.png",
     githubUrl: "https://github.com/rhuynh06/YummiBook",
     techStack: [
       { name: "React", url: "/tech/react.svg" },
@@ -121,7 +121,7 @@ export const projects = [
     role: "Full-stack Developer",
     desc: "A real-time chat platform with audio/video calls, file sharing, and role-based server management.",
     websiteLink: "https://awaken-chat-pcrr.vercel.app/",
-    imageUrl: "/projects/awakenchat.png",
+    imageUrl: "projects/awakenchat.png",
     githubUrl: "https://github.com/rhuynh06/AwakenChat",
     techStack: [
       { name: "Next.js", url: "/tech/nextjs.svg" },

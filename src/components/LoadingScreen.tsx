@@ -138,9 +138,18 @@ export function LoadingScreen() {
 
   // Progress bar increment
   useEffect(() => {
+    const totalDuration = 4500; // ms total
+    const intervalMs = 20; // interval period in ms
+    const steps = totalDuration / intervalMs; // total number of increments
+    const increment = 100 / steps; // progress increment per step
+
+    let currentProgress = 0;
     const interval = setInterval(() => {
-      setProgress((p) => Math.min(p + Math.random() * 8, 100));
-    }, 280);
+      currentProgress += increment;
+      setProgress(Math.min(currentProgress, 100));
+      if (currentProgress >= 100) clearInterval(interval);
+    }, intervalMs);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -155,7 +164,7 @@ export function LoadingScreen() {
   // Typewriter effect for subtitle
   const subtitle = useTypewriter("Building AI-powered dreams...", 100);
 
-  // Keyboard handlers for R and D keys
+  // Keyboard handlers for Refresh (R)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key.toLowerCase() === "r") {

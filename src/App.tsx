@@ -42,7 +42,7 @@ function App() {
     "btn-light dark:btn-dark";
 
   useEffect(() => {
-    const timeout = setTimeout(() => setLoading(false), 10000);
+    const timeout = setTimeout(() => setLoading(false), 5000);
     return () => clearTimeout(timeout);
   }, []);
 
