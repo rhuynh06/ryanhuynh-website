@@ -58,7 +58,7 @@ function App() {
 
         <div className="basis-2/4 flex justify-center">
           <img
-            src="pfp.png"
+            src="/pfp.png"
             alt="Ryan's profile photo"
             className="w-auto h-64 rounded-full border-4 border-primary"
           />

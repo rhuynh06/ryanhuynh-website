@@ -66,7 +66,7 @@ export default function ContactPanel() {
         aria-label="Email"
       >
         <img
-          src="src/assets/contact/gmail.svg"
+          src="/contact/gmail.svg"
           alt="Gmail"
           className="w-10 hover:opacity-70 transition"
         />
@@ -78,7 +78,7 @@ export default function ContactPanel() {
         aria-label="GitHub"
       >
         <img
-          src={dark ? "src/assets/contact/github_dark.png" : "src/assets/contact/github_light.svg"}
+          src={dark ? "/contact/github_dark.png" : "/contact/github_light.svg"}
           alt="GitHub"
           className="w-8 hover:opacity-70 transition"
         />
@@ -90,7 +90,7 @@ export default function ContactPanel() {
         aria-label="LinkedIn"
       >
         <img
-          src="src/assets/contact/linkedin.svg"
+          src="/contact/linkedin.svg"
           alt="LinkedIn"
           className="w-8 hover:opacity-70 transition"
         />
