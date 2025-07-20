@@ -73,7 +73,7 @@ export function ProjectCardModal({
           </div>
 
           <Dialog.Close
-            className="absolute top-3 right-3 rounded-full bg-gray-200 p-1 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600 transition cursor-pointer"
+            className="absolute top-3 right-3 p-1 cursor-pointer"
             aria-label="Close"
           >
             ✕
