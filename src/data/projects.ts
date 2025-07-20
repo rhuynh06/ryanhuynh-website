@@ -1,8 +1,9 @@
 export const projects = [
   {
     name: "Task Manager",
-    role: "Front-end Developer",
-    desc: "A productivity web app that helps users create, organize, and prioritize daily tasks with persistent tracking.",
+    role: "Full-stack Developer",
+    desc: "Built a task management web app enabling users to add/edit/delete tasks with persistent local storage.",
+    longDesc: "Task Manager is a productivity web app built with vanilla JS, HTML, and CSS. It allows users to create, organize, and prioritize daily tasks with persistent local storage. Enhanced usability through color-coded priorities and responsive layouts improves productivity and accessibility.",
     websiteLink: "https://rhuynh06.github.io/task-manager/",
     imageUrl: "/projects/task-manager.png",
     githubUrl: "https://github.com/rhuynh06/task-manager",
@@ -15,7 +16,8 @@ export const projects = [
   {
     name: "Pokédex",
     role: "Full-stack Developer",
-    desc: "An interactive encyclopedia that lets users search, filter, and explore Pokémon with rich visuals and responsive design.",
+    desc: "Created an interactive Pokédex with dynamic search, filter, and responsive design.",
+    longDesc: "This Pokédex app fetches data from PokéAPI asynchronously, enabling users to browse, filter, and search Pokémon dynamically. The app features animated card UI and responsive layouts, improving user engagement across devices.",
     websiteLink: "https://rhuynh06.github.io/pokedex/",
     imageUrl: "/projects/pokedex.png",
     githubUrl: "https://github.com/rhuynh06/pokedex",
@@ -26,9 +28,10 @@ export const projects = [
     ],
   },
   {
-    name: "Fitness Surfers",
+    name: "Fitness Surfers – BitHacks 2025",
     role: "Lead Embedded Systems Developer",
-    desc: "A motion-controlled fitness game that uses body movement to control an arcade character in real time.",
+    desc: "Real-time fitness game controlled by body motion using ESP32 sensors.",
+    longDesc: "Spearheaded development of a fitness game using dual PIR sensors on ESP32-S3 for motion-based control of a 2D arcade character. Integrated game engine built with Pygame featuring animated sprites, GIFs, and synced audio for immersion. Used Google Gemini AI TTS for dynamic failure feedback and developed low-latency ESP32-to-PC communication with pyserial for smooth hardware-software integration.",
     websiteLink: "https://devpost.com/software/fitness-surfers",
     imageUrl: "/projects/fitness-surfers.png",
     githubUrl: "https://github.com/rhuynh06/FitnessSurfers",
@@ -37,12 +40,18 @@ export const projects = [
       { name: "Python", url: "/tech/python.svg" },
       { name: "Google Gemini", url: "/tech/gemini.svg" },
     ],
+    collaborators: [
+      { name: "Shymakak Pal", affiliation: "CS, UCI' 28"},
+      { name: "John Payday", affiliation: "CSE, UCI' 27"},
+      { name: "Qui Pham", affiliation: "CSE, UCI' 28"}
+    ]
   },
   {
-    name: "Note Ninjas",
+    name: "Note Ninjas – AWS CloudHacks (Finalist)",
     role: "Lead Full-stack Developer",
-    desc: "A cloud-based app that turns notes into flashcards and study guides using generative AI.",
-    websiteLink: "https://devpost.com/software/ai-study-guide-generator-0hrlm1",
+    desc: "Cloud app converting notes to AI-generated flashcards and study guides.",
+    longDesc: "Directed end-to-end development of a study tool converting notes into flashcards using React/Vite frontend and Python Lambda backend. Integrated AWS Bedrock for summarization into Q&A style guides and Amazon Polly TTS for auditory review. Architected secure and scalable deployment via AWS Amplify, API Gateway, IAM, and Lambda for reliability and controlled access.",
+    websiteLink: "https://devpost.com/software/ai-study-guide-generator-0hrlm1?ref_content=my-projects-tab&ref_feature=my_projects",
     imageUrl: "/projects/note-ninjas.png",
     githubUrl: "https://github.com/rhuynh06/NoteNinjas",
     techStack: [
@@ -55,11 +64,16 @@ export const projects = [
       { name: "Vite", url: "/tech/vite.svg" },
       { name: "Python", url: "/tech/python.svg" },
     ],
+    collaborators: [
+      { name: "Kelvin Truong", affiliation: "CS, UCI' 28"},
+      { name: "Ethan Vo", affiliation: "CS, UCI' 27"},
+    ]
   },
   {
     name: "MNIST AI Digit Predictor",
     role: "Full-stack Developer",
-    desc: "A live web app that predicts user-drawn digits using an AI model trained on MNIST.",
+    desc: "Live web app predicting user-drawn digits with AI trained on MNIST.",
+    longDesc: "Developed a full-stack AI app combining Flask, TensorFlow, and React to predict digits drawn by users in real-time. Achieved over 98% accuracy using a CNN trained on MNIST. Created responsive canvas with debounced input and reduced latency by 90% through environment separation. Deployed publicly via GitHub Pages and Render, enabling seamless user experience and robust backend communication.",
     websiteLink: "https://rhuynh06.github.io/digit-predictor/",
     imageUrl: "/projects/digit-predictor.png",
     githubUrl: "https://github.com/rhuynh06/digit-predictor",
@@ -72,9 +86,10 @@ export const projects = [
     ],
   },
   {
-    name: "LevelNotes",
+    name: "LevelNotes: Gamified Note-Taking App",
     role: "Full-stack Developer",
-    desc: "A gamified note-taking app that rewards users as they write, helping boost focus and productivity.",
+    desc: "Note-taking app rewarding users to boost focus and productivity.",
+    longDesc: "Implemented a dynamic contentEditable React editor managing cursor state with API call debouncing to enable smooth typing. Built Flask REST API with SQLAlchemy and secure session auth, enabling persistent data storage. Integrated gamification tracking writing activity and real-time level-up feedback to increase user engagement. Deployed backend on Render with CORS and session support, achieving scalable, secure cloud hosting.",
     websiteLink: "https://rhuynh06.github.io/LevelNotes/",
     imageUrl: "/projects/LevelNotes.png",
     githubUrl: "https://github.com/rhuynh06/LevelNotes",
@@ -87,9 +102,10 @@ export const projects = [
     ],
   },
   {
-    name: "My2048",
+    name: "My2048: AI-Enhanced 2048 Game",
     role: "Full-stack Developer",
-    desc: "An AI-powered version of the 2048 game with hints, autoplay, and customizable visuals.",
+    desc: "Modernized 2048 game with AI hints, autoplay, and customizable visuals.",
+    longDesc: "Built a React frontend with customizable skins, multiple grid sizes, undo feature, and polished UX for enhanced player engagement. Developed a Python FastAPI backend using Expectimax search AI to provide move hints and autoplay functionality. Managed complex React state with hooks for persistent settings and seamless AI integration, showcasing expertise in AI algorithms and scalable full-stack development.",
     websiteLink: "https://rhuynh06.github.io/My2048/",
     imageUrl: "/projects/My2048.png",
     githubUrl: "https://github.com/rhuynh06/My2048",
@@ -101,9 +117,10 @@ export const projects = [
     ],
   },
   {
-    name: "YummiBook",
+    name: "YummiBook: Recipe Manager",
     role: "Lead Full-stack Developer",
-    desc: "A recipe manager that lets users browse, edit, and filter recipes by diet, cuisine, and more.",
+    desc: "Recipe manager with filtering, editing, and responsive UI.",
+    longDesc: "Architected a full-stack recipe management platform with optimized query logic using Express and Prisma for fast filtering. Designed a responsive, user-friendly interface with React, Mantine UI, and Tailwind CSS enabling real-time recipe editing and validation. Built advanced multi-criteria filtering for cuisine, meal time, price, tags, and dietary preferences. Implemented environment-based backend route gating for secure dev features and production data safety.",
     websiteLink: "https://rhuynh06.github.io/YummiBook/",
     imageUrl: "/projects/YummiBook.png",
     githubUrl: "https://github.com/rhuynh06/YummiBook",
@@ -115,11 +132,16 @@ export const projects = [
       { name: "Mantine UI", url: "/tech/mantine.svg" },
       { name: "JavaScript", url: "/tech/js.svg" },
     ],
+    collaborators: [
+      { name: "Marvin Tran", affiliation: "CS, UCLA' 28"},
+      { name: "Anthony Kieu", affiliation: "CS, SJSU' 27"},
+    ]
   },
   {
-    name: "AwakenChat",
+    name: "AwakenChat: Real-Time Chat Platform",
     role: "Full-stack Developer",
-    desc: "A real-time chat platform with audio/video calls, file sharing, and role-based server management.",
+    desc: "Discord-inspired chat app with real-time messaging and video calls.",
+    longDesc: "Developed a full-featured chat platform using Next.js featuring real-time messaging, file sharing, audio/video calls, role-based access control, and a polished responsive UI. Integrated LiveKit for WebRTC streaming and UploadThing for file uploads to support seamless communication. Managed server, channel, and member data with Supabase for authentication, authorization with Row Level Security (RLS), and relational modeling. Optimized real-time communication with Socket.io ensuring low-latency, consistent sync, and fallback support.",
     websiteLink: "https://awaken-chat-pcrr.vercel.app/",
     imageUrl: "/projects/AwakenChat.png",
     githubUrl: "https://github.com/rhuynh06/AwakenChat",

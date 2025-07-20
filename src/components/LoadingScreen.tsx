@@ -138,7 +138,7 @@ export function LoadingScreen() {
 
   // Progress bar increment
   useEffect(() => {
-    const totalDuration = 4500; // ms total
+    const totalDuration = 4250; // ms total
     const intervalMs = 20; // interval period in ms
     const steps = totalDuration / intervalMs; // total number of increments
     const increment = 100 / steps; // progress increment per step
