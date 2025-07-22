@@ -30,6 +30,7 @@ const techStackIcons = [
   "/tech/uploadthing.png",
   "/tech/supabase.svg",
   "/tech/postgresql.svg",
+  "/tech/numpy.svg"
 ];
 
 const personalLoadingMessages = [

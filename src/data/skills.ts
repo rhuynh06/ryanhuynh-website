@@ -22,10 +22,11 @@ export const frameworks: { name: string; level: Level }[] = [
   { name: "React", level: "green" },
   { name: "Node.js", level: "yellow" },
   { name: "Express", level: "yellow" },
+  { name: "NumPy", level: "yellow" },
+  { name: "Pandas", level: "gray" },
   { name: "Django", level: "gray" },
   { name: "PyTorch", level: "gray" },
   { name: "TensorFlow", level: "gray" },
-  { name: "NumPy", level: "gray" },
   { name: "Scikit-Learn", level: "gray" }
 ];
 

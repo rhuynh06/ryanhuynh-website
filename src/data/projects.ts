@@ -114,6 +114,7 @@ export const projects = [
       { name: "FastAPI", url: "/tech/fastapi.svg" },
       { name: "Python", url: "/tech/python.svg" },
       { name: "JavaScript", url: "/tech/js.svg" },
+      { name: "NumPy", url: "/tech/numpy.svg" },
     ],
   },
   {
