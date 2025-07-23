@@ -24,6 +24,8 @@ export const frameworks: { name: string; level: Level }[] = [
   { name: "Express", level: "yellow" },
   { name: "NumPy", level: "yellow" },
   { name: "Pandas", level: "gray" },
+  { name: "Seaborn", level: "gray" },
+  { name: "Matplotlib", level: "gray" },
   { name: "Django", level: "gray" },
   { name: "PyTorch", level: "gray" },
   { name: "TensorFlow", level: "gray" },
