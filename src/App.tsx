@@ -31,7 +31,7 @@ function App() {
     { href: "#about", label: "About Me" },
     { href: "#experience", label: "Experience" },
     { href: "#projects", label: "Projects" },
-    { href: "#certificates", label: "Certificates" },
+    // { href: "#certificates", label: "Certificates" },
   ];
 
   const navButtonClasses =
@@ -214,7 +214,7 @@ function App() {
       </section>
 
       {/* Certificates */}
-      <section
+      {/* <section
         id="certificates"
         className="min-h-screen flex flex-col justify-center items-center text-center p-8 mb-4"
       >
@@ -224,7 +224,7 @@ function App() {
         <p className="max-w-xl bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">
           Coming soon...
         </p>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <ContactPanel />
