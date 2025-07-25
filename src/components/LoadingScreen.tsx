@@ -33,7 +33,7 @@ const techStackIcons = [
   "/tech/numpy.svg",
   "/tech/pandas.svg",
   "/tech/seaborn.svg",
-  "/tech/mathplotlib.svg",
+  "/tech/matplotlib.svg",
   "/tech/scikit-learn.svg",
   "/tech/bash.svg"
 ];
