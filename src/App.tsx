@@ -17,6 +17,7 @@ import { LoadingScreen } from './components/LoadingScreen';
 function App() {
   const [loading, setLoading] = useState(true);
   const [showStats, setShowStats] = useState(false);
+  const [openProjectModalIndex, setOpenProjectModalIndex] = useState<number | null>(null);
 
   const introPhrases = [
     "currently deepening my skills in PyTorch, SQLAlchemy, and PostgreSQL.",
@@ -208,7 +209,13 @@ function App() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center w-full px-4">
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            <ProjectCard 
+              key={index}
+              {...project}
+              isModalOpen={openProjectModalIndex === index}
+              openModal={() => setOpenProjectModalIndex(index)}
+              closeModal={() => setOpenProjectModalIndex(null)}
+            />
           ))}
         </div>
       </section>
@@ -227,11 +234,10 @@ function App() {
       </section> */}
 
       {/* Contact Section */}
-      <ContactPanel />
+      {openProjectModalIndex === null && <ContactPanel />}
 
       {/* Conditionally render the StatsModal */}
       {showStats && <StatsModal onClose={() => setShowStats(false)} />}
-
 
       {/* Footer */}
       <footer className="w-full text-center pt-10 pb-6 text-gray-500 dark:text-gray-400 select-none">

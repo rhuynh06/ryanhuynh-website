@@ -29,6 +29,9 @@ export interface ProjectCardProps {
   imageUrl: string;
   githubUrl: string;
   collaborators?: Collaborator[];
+  isModalOpen: boolean;
+  openModal: () => void;
+  closeModal: () => void;
 }
 
 export function ProjectCard({
@@ -41,9 +44,11 @@ export function ProjectCard({
   imageUrl,
   githubUrl,
   collaborators,
+  isModalOpen,
+  openModal,
+  closeModal,
 }: ProjectCardProps) {
   const [flipped, setFlipped] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
 
   const invertLogos = new Set([
     "Flask",
@@ -76,18 +81,31 @@ export function ProjectCard({
             rounded-2xl shadow-xl p-4 overflow-hidden
             transition-colors duration-300"
           >
-            <div
-              className="flex items-center justify-center h-[60%] mb-2"
-            >
+            <div className="flex items-center justify-center h-[60%] mb-2">
               <img
                 src={imageUrl}
                 alt={name}
-                className="w-auto h-full object-cover rounded-xl shadow-md"
+                className="w-auto h-full object-cover rounded-xl shadow-md border-5 border-black/60 dark:border-1 dark:border-green-400"
                 onClick={(e) => {
                   e.stopPropagation();
-                  setModalOpen(true);
+                  openModal();
                 }}
               />
+              <div
+                className="absolute bottom-[45%] left-1/2 transform -translate-x-1/2"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  openModal();
+                }}
+                role="button"
+                tabIndex={0}
+                aria-label="Open modal by swipe up or click"
+              >
+                <div
+                  className="w-20 h-1.5 bg-gray-300 rounded-full shadow-md dark:bg-gray-600 cursor-pointer"
+                  aria-hidden="true"
+                />
+              </div>
             </div>
 
             <h3
@@ -157,7 +175,7 @@ export function ProjectCard({
             <p className="text-sm text-blue-900 dark:text-green-400 font-medium mb-2">
               {desc}
             </p>
-            
+
             {collaborators && collaborators.length > 0 && (
               <div className="mt-3 text-xs text-blue-700 dark:text-green-300">
                 <p className="font-semibold mb-1">Collaborators:</p>
@@ -166,7 +184,10 @@ export function ProjectCard({
                     <li key={i}>
                       {c.name}
                       {c.affiliation && (
-                        <span className="italic text-gray-600 dark:text-gray-400"> — {c.affiliation}</span>
+                        <span className="italic text-gray-600 dark:text-gray-400">
+                          {" "}
+                          — {c.affiliation}
+                        </span>
                       )}
                     </li>
                   ))}
@@ -183,8 +204,8 @@ export function ProjectCard({
 
       {/* Modal */}
       <ProjectCardModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
+        isOpen={isModalOpen}
+        onClose={closeModal}
         name={name}
         role={role}
         desc={longDesc}

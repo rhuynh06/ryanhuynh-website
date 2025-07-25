@@ -11,6 +11,7 @@ export const languages: { name: string; level: Level }[] = [
   { name: "SQL", level: "yellow" },
   { name: "PHP", level: "yellow" },
   { name: "Java", level: "yellow" },
+  { name: "Bash", level: "yellow" },
   { name: "Spanish (Elementary)", level: "gray" }
 ];
 
