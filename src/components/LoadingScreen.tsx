@@ -33,7 +33,8 @@ const techStackIcons = [
   "/tech/numpy.svg",
   "/tech/pandas.svg",
   "/tech/seaborn.svg",
-  "/tech/mathplotlib.svg"
+  "/tech/mathplotlib.svg",
+  "/tech/scikit-learn.svg"
 ];
 
 const personalLoadingMessages = [

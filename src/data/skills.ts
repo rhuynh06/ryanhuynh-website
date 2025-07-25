@@ -25,6 +25,7 @@ export const frameworks: { name: string; level: Level }[] = [
   { name: "NumPy", level: "yellow" },
   { name: "Pandas", level: "yellow" },
   { name: "Seaborn", level: "yellow" },
+  { name: "Scikit-Learn", level: "yellow" },
   { name: "Matplotlib", level: "yellow" },
   { name: "Django", level: "gray" },
   { name: "PyTorch", level: "gray" },
