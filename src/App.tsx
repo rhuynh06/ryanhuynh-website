@@ -115,16 +115,16 @@ function App() {
               className="space-y-5 text-lg leading-relaxed0"
             >
               <p>
-                Hey — I'm <strong>Ryan Huynh</strong>, a Computer Science undergraduate at <strong>UC Irvine</strong> specializing in Intelligent Systems. 
+                Hey, I'm a Computer Science undergraduate at <strong>UC Irvine</strong> specializing in Intelligent Systems. 
                 I'm currently diving deep into <strong>PyTorch</strong>, <strong>PostgreSQL</strong>, <strong>SQLAlchemy</strong>, and <strong>Prisma ORM</strong>, 
                 while building AI-powered apps that aim to make everyday life just a bit easier.
               </p>
               <p>
-                I'm passionate about turning ideas into polished products — blending creativity with practical problem-solving. 
+                I'm passionate about turning ideas into polished products blending creativity with practical problem-solving. 
                 I love exploring the intersection of AI and full-stack development, and often find myself experimenting with tools like <strong>React</strong>, <strong>Flask</strong>, and <strong>Tailwind CSS</strong>.
               </p>
               <p>
-                Outside of coding, I'm a former tri-athlete in water polo, wrestling, and swim — experiences that shaped my discipline and teamwork.
+                Outside of coding, I'm a former tri-athlete in water polo, wrestling, and swim, experiences that shaped my discipline and teamwork.
                 These days, I recharge by spending time with family, getting outdoors, and exploring new places whenever I can.
               </p>
               <p>
