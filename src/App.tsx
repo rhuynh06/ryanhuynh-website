@@ -5,11 +5,12 @@ import ContactPanel from './components/ContactPanel';
 import { ExperienceCard } from './components/ExperienceCard';
 import { LiveTyping } from './components/LiveTyping';
 import { ProjectCard } from './components/ProjectCard';
+import { CertificateCard } from './components/CertificateCard';
 import { Tag } from './components/Tag';
-
 import { relatedCoursework } from './data/coursework';
 import { experiences } from './data/experiences';
 import { projects } from './data/projects';
+import { certifications } from './data/certifications';
 import { languages, frameworks, tools } from "./data/skills";
 import { StatsModal } from './components/StatsModal';
 import { LoadingScreen } from './components/LoadingScreen';
@@ -226,11 +227,13 @@ function App() {
         className="min-h-screen flex flex-col justify-center items-center text-center p-8 mb-4"
       >
         <h2 className="text-3xl font-bold mb-6 underline decoration-2 underline-offset-4 dark:text-green-400 dark:drop-shadow-[0_0_10px_rgba(161,255,10,0.9)] transition-colors duration-300">
-          certificates
+          certifications
         </h2>
-        <p className="max-w-xl bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">
-          Coming soon...
-        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center w-full px-4">
+          {certifications.map((cert, index) => (
+            <CertificateCard key={index} {...cert} />
+          ))}
+        </div>
       </section> */}
 
       {/* Contact Section */}
