@@ -30,8 +30,7 @@ export function ProjectCardModal({
         <Dialog.Content
           className="fixed top-1/2 left-1/2 max-h-[90vh] w-[90vw] max-w-3xl -translate-x-1/2 -translate-y-1/2 overflow-auto rounded-lg
             bg-white p-6 shadow-lg
-            dark:bg-gray-900 dark:shadow-green-900
-            focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+            dark:bg-gray-900 dark:shadow-green-900"
         >
           <Dialog.Title className="text-3xl text-center font-bold text-gray-900 dark:text-green-400">
             {name}

@@ -5,7 +5,7 @@ import ContactPanel from './components/ContactPanel';
 import { ExperienceCard } from './components/ExperienceCard';
 import { LiveTyping } from './components/LiveTyping';
 import { ProjectCard } from './components/ProjectCard';
-import { CertificateCard } from './components/CertificateCard';
+import { CertificateCard, type CertificateData } from './components/CertificateCard';
 import { Tag } from './components/Tag';
 import { relatedCoursework } from './data/coursework';
 import { experiences } from './data/experiences';
@@ -19,6 +19,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [showStats, setShowStats] = useState(false);
   const [openProjectModalIndex, setOpenProjectModalIndex] = useState<number | null>(null);
+  const [openCertificateModalIndex, setOpenCertificateModalIndex] = useState<number | null>(null);
 
   const introPhrases = [
     "currently deepening my skills in PyTorch, SQLAlchemy, and PostgreSQL.",
@@ -33,7 +34,7 @@ function App() {
     { href: "#about", label: "About Me" },
     { href: "#experience", label: "Experience" },
     { href: "#projects", label: "Projects" },
-    // { href: "#certificates", label: "Certificates" },
+    { href: "#certificates", label: "Certificates" },
   ];
 
   const navButtonClasses =
@@ -42,6 +43,41 @@ function App() {
     "hover:bg-blue-600 hover:shadow-lg " + 
     "dark:bg-[#0f380f] dark:text-[#a1ff0a] dark:border-[#56ff1b] dark:shadow-green-500 dark:hover:shadow-[0_0_20px_#a1ff0a] " +
     "btn-light dark:btn-dark";
+
+  function sortCertificates(certificates: CertificateData[]) {
+    return certificates.sort((a, b) => {
+      // 1. Sort by status: completed first
+      if (a.status !== b.status) {
+        return a.status === 'completed' ? -1 : 1;
+      }
+
+      // 2. Sort by issuer (alphabetically)
+      const issuerComparison = a.issuer.localeCompare(b.issuer);
+      if (issuerComparison !== 0) {
+        return issuerComparison;
+      }
+
+      // 3. Sort by date (newest first)
+      const dateA = parseCertificateDate(a.date);
+      const dateB = parseCertificateDate(b.date);
+      return dateB.getTime() - dateA.getTime();
+    });
+  }
+
+  // helper function to parse date
+  function parseCertificateDate(dateStr: string): Date {
+    const trimmed = dateStr.trim().toLowerCase();
+
+    if (!trimmed || trimmed === 'n/a') {
+      return new Date(0); // n/a at the bottom (very old)
+    }
+
+    // ex: "July 2025" → "July 1, 2025"
+    const fullDateStr = `${trimmed} 1`;
+    const parsed = new Date(fullDateStr);
+
+    return isNaN(parsed.getTime()) ? new Date(0) : parsed;
+  }
 
   useEffect(() => {
     const timeout = setTimeout(() => setLoading(false), 5000);
@@ -222,7 +258,7 @@ function App() {
       </section>
 
       {/* Certificates */}
-      {/* <section
+      <section
         id="certificates"
         className="min-h-screen flex flex-col justify-center items-center text-center p-8 mb-4"
       >
@@ -230,14 +266,20 @@ function App() {
           certifications
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center w-full px-4">
-          {certifications.map((cert, index) => (
-            <CertificateCard key={index} {...cert} />
+          {sortCertificates(certifications).map((cert, index) => (
+            <CertificateCard
+              key={cert.title}
+              {...cert}
+              isModalOpen={openCertificateModalIndex === index}
+              openModal={() => setOpenCertificateModalIndex(index)}
+              closeModal={() => setOpenCertificateModalIndex(null)}
+            />
           ))}
         </div>
-      </section> */}
+      </section>
 
       {/* Contact Section */}
-      {openProjectModalIndex === null && <ContactPanel />}
+      {!openCertificateModalIndex && openProjectModalIndex === null && <ContactPanel />}
 
       {/* Conditionally render the StatsModal */}
       {showStats && <StatsModal onClose={() => setShowStats(false)} />}
