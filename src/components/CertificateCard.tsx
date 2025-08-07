@@ -77,8 +77,8 @@ export function CertificateCard({
   return (
     <>
       <div
-        className="relative group w-[300px] h-[180px] rounded-lg cursor-pointer"
-        onClick={() => link && openModal()}
+        className="relative group w-[300px] h-[120px] rounded-lg cursor-pointer"
+        onClick={() => status !== "in progress" && openModal()}
       >
         {/* Glowing gradient background */}
         <div

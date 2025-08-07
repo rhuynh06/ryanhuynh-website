@@ -1,4 +1,6 @@
 import * as Dialog from "@radix-ui/react-dialog";
+import { ArrowUpRight } from "lucide-react";
+import { useState } from "react";
 
 interface CertificatePreviewModalProps {
   isOpen: boolean;
@@ -15,6 +17,7 @@ export function CertificatePreviewModal({
   link,
   img,
 }: CertificatePreviewModalProps) {
+  const [imageSrc, setImageSrc] = useState(img);
 
   return (
     <Dialog.Root open={isOpen} onOpenChange={(open) => !open && onClose()}>
@@ -29,27 +32,37 @@ export function CertificatePreviewModal({
             {title}
           </Dialog.Title>
 
+          {/* Always show image */}
           <div className="mt-4 max-h-[70vh] overflow-auto">
-              <img
-                src={img}
-                alt={title}
-                className="w-full max-h-[70vh] object-contain mx-auto rounded"
-              />
+            <img
+              src={imageSrc}
+              alt={title}
+              onError={() =>
+                setImageSrc(
+                  "https://via.placeholder.com/800x600?text=Certificate+Image+Unavailable"
+                )
+              }
+              className="w-full max-h-[70vh] object-contain mx-auto rounded"
+            />
           </div>
 
-          {!!link && (
-            <p className="mt-4 text-center text-sm text-blue-600 dark:text-blue-400">
+          {/* Show link only if provided */}
+          {link && (
+            <div className="mt-6 flex justify-center">
               <a
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline"
+                className="inline-flex items-center gap-2 px-5 py-2 text-sm font-medium text-white bg-blue-600 rounded-full shadow 
+                          hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-all duration-200"
               >
-                View full certificate
+                View Full Certificate
+                <ArrowUpRight className="w-4 h-4" />
               </a>
-            </p>
+            </div>
           )}
 
+          {/* Close button */}
           <Dialog.Close
             className="absolute top-3 right-3 p-1 cursor-pointer text-lg text-gray-600 dark:text-gray-300"
             aria-label="Close"

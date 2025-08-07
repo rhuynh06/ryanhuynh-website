@@ -53,7 +53,7 @@ export const certifications: {
     img: "/certificates/kaggle/Intermediate ML.png"
   },
   {
-    title: "Legacy JavaScript Algorithms and Data Structures",
+    title: "Legacy JS & DSA",
     issuer: "freeCodeCamp",
     date: "Sept 2023",
     icon: "/certificates/icons/fcc.svg",
@@ -95,7 +95,7 @@ export const certifications: {
     icon: "/certificates/icons/fcc.svg",
     status: "completed",
     link: "https://www.freecodecamp.org/certification/unknownperson2/foundational-c-sharp-with-microsoft",
-    img: "/certificates/fcc/Foundational C# with Microsoft.png"
+    img: "/certificates/fcc/Foundational C with Microsoft.png"
   },
   {
     title: "Scientific Computing with Python",
