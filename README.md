@@ -9,7 +9,6 @@ Welcome to my personal portfolio repository! This project showcases my software 
 - Dark mode support
 - Interactive project cards with detailed modals
 - Tech stack tooltips and GitHub repo links
-- Smooth animations and transitions
 
 ## Technologies Used
 
@@ -17,4 +16,3 @@ Welcome to my personal portfolio repository! This project showcases my software 
 - TypeScript
 - Tailwind CSS
 - React Icons
-- Vercel (for deployment)
