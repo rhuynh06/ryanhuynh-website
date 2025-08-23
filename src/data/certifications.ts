@@ -46,10 +46,10 @@ export const certifications: {
   {
     title: "Intermediate Machine Learning",
     issuer: "Kaggle",
-    date: "n/a",
+    date: "August 2025",
     icon: "/certificates/icons/kaggle.svg",
-    status: "in progress",
-    link: "", // TODO
+    status: "completed",
+    link: "https://www.kaggle.com/learn/certification/godlywarrior/intermediate-machine-learning",
     img: "/certificates/kaggle/Intermediate ML.png"
   },
   {
