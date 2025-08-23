@@ -28,7 +28,7 @@ export const certifications: {
   {
     title: "Intro to Machine Learning",
     issuer: "Kaggle",
-    date: "Sept 2024",
+    date: "September 2024",
     icon: "/certificates/icons/kaggle.svg",
     status: "completed",
     link: "https://www.kaggle.com/learn/certification/godlywarrior/intro-to-machine-learning",
@@ -55,7 +55,7 @@ export const certifications: {
   {
     title: "Legacy JS & DSA",
     issuer: "freeCodeCamp",
-    date: "Sept 2023",
+    date: "September 2023",
     icon: "/certificates/icons/fcc.svg",
     status: "completed",
     link: "https://www.freecodecamp.org/certification/unknownperson2/javascript-algorithms-and-data-structures",
@@ -73,7 +73,7 @@ export const certifications: {
   {
     title: "JavaScript Algorithms and Data Structures",
     issuer: "freeCodeCamp",
-    date: "Aug 2024",
+    date: "August 2024",
     icon: "/certificates/icons/fcc.svg",
     status: "completed",
     link: "https://www.freecodecamp.org/certification/unknownperson2/javascript-algorithms-and-data-structures-v8",
@@ -91,7 +91,7 @@ export const certifications: {
   {
     title: "Foundational C# with Microsoft",
     issuer: "freeCodeCamp",
-    date: "Jan 2025",
+    date: "January 2025",
     icon: "/certificates/icons/fcc.svg",
     status: "completed",
     link: "https://www.freecodecamp.org/certification/unknownperson2/foundational-c-sharp-with-microsoft",
@@ -100,7 +100,7 @@ export const certifications: {
   {
     title: "Scientific Computing with Python",
     issuer: "freeCodeCamp",
-    date: "Aug 2024",
+    date: "August 2024",
     icon: "/certificates/icons/fcc.svg",
     status: "completed",
     link: "https://www.freecodecamp.org/certification/unknownperson2/scientific-computing-with-python-v7",

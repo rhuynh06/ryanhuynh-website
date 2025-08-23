@@ -45,37 +45,25 @@ function App() {
     "btn-light dark:btn-dark";
 
   function sortCertificates(certificates: CertificateData[]) {
-    return certificates.sort((a, b) => {
-      // 1. Sort by status: completed first
-      if (a.status !== b.status) {
-        return a.status === 'completed' ? -1 : 1;
-      }
+    return [...certificates].sort((a, b) => {
+      // 1. Status: completed first
+      if (a.status !== b.status) return a.status === "completed" ? -1 : 1;
 
-      // 2. Sort by issuer (alphabetically)
-      const issuerComparison = a.issuer.localeCompare(b.issuer);
-      if (issuerComparison !== 0) {
-        return issuerComparison;
-      }
-
-      // 3. Sort by date (newest first)
+      // 2. Date: newest first
       const dateA = parseCertificateDate(a.date);
       const dateB = parseCertificateDate(b.date);
       return dateB.getTime() - dateA.getTime();
     });
   }
 
-  // helper function to parse date
   function parseCertificateDate(dateStr: string): Date {
-    const trimmed = dateStr.trim().toLowerCase();
+    if (!dateStr || dateStr.trim().toLowerCase() === "n/a") return new Date(0);
 
-    if (!trimmed || trimmed === 'n/a') {
-      return new Date(0); // n/a at the bottom (very old)
-    }
+    const [month, year] = dateStr.trim().split(/\s+/);
+    if (!month || !year) return new Date(0);
 
-    // ex: "July 2025" → "July 1, 2025"
-    const fullDateStr = `${trimmed} 1`;
-    const parsed = new Date(fullDateStr);
-
+    const capitalizedMonth = month.charAt(0).toUpperCase() + month.slice(1);
+    const parsed = new Date(`${capitalizedMonth} 1, ${year}`);
     return isNaN(parsed.getTime()) ? new Date(0) : parsed;
   }
 
