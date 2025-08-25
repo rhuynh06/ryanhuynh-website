@@ -7,6 +7,13 @@ export const experiences = [
       imageUrl: "/experiences/dev_group.png"
    },
    {
+      name: "Electronic Arts (Forage)",
+      position: "SWE Virtual Experience Participant",
+      dates: "August 2025",
+      desc: `Proposed and documented a new gameplay feature for EA Sports College Football, improving stakeholder communication. Designed class diagrams and implemented C++ header files for efficient object-oriented structure. Patched bugs and optimized codebase by applying improved data structures, enhancing performance and maintainability.`,
+      imageUrl: "/experiences/ea.svg"
+   },
+   {
       name: "KNT Foundation",
       position: "Organizing Committee & Volunteer",
       dates: "May 2019 — Present",

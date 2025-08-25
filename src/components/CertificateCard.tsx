@@ -20,6 +20,7 @@ const issuerGlowGradients: Record<string, string> = {
   AWS: "from-yellow-400 to-yellow-600",
   freeCodeCamp: "from-green-400 to-green-600",
   Kaggle: "from-purple-400 to-purple-600",
+  Forage: "from-blue-400 to-blue-600",
   Default: "from-gray-400 to-gray-600",
 };
 

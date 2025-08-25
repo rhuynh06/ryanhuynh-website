@@ -106,6 +106,14 @@ export const certifications: {
     link: "https://www.freecodecamp.org/certification/unknownperson2/scientific-computing-with-python-v7",
     img: "/certificates/fcc/Scientific Computing with Python.png"
   },
+  // {
+  //   title: "SWE Virtual Experience Program",
+  //   issuer: "Forage",
+  //   date: "August 2025",
+  //   icon: "/certificates/icons/ea.svg",
+  //   status: "completed",
+  //   img: "/certificates/forage/EA.png"
+  // },
   {
     title: "Machine Learning with Python",
     issuer: "freeCodeCamp",
