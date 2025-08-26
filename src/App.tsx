@@ -14,12 +14,14 @@ import { certifications } from './data/certifications';
 import { languages, frameworks, tools } from "./data/skills";
 import { StatsModal } from './components/StatsModal';
 import { LoadingScreen } from './components/LoadingScreen';
+import SkillsModal from './components/SkillsModal';
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [showStats, setShowStats] = useState(false);
   const [openProjectModalIndex, setOpenProjectModalIndex] = useState<number | null>(null);
   const [openCertificateModalIndex, setOpenCertificateModalIndex] = useState<number | null>(null);
+  const [isSkillsModalOpen, setIsSkillsModalOpen] = useState(false);
 
   const introPhrases = [
     "currently deepening my skills in PyTorch, SQLAlchemy, and PostgreSQL.",
@@ -160,12 +162,13 @@ function App() {
           </div>
 
           <div className="flex-1 space-y-6">
-            <h3
-              className="text-3xl font-bold mb-6 underline decoration-2 underline-offset-4 dark:text-green-400 dark:drop-shadow-[0_0_10px_rgba(161,255,10,0.9)] transition-colors duration-300"
-            >
-              skills & technologies
-            </h3>
-
+          <h3
+            onClick={() => setIsSkillsModalOpen(true)}
+            className="text-3xl font-bold mb-6 underline decoration-2 underline-offset-4 dark:text-green-400 dark:drop-shadow-[0_0_10px_rgba(161,255,10,0.9)] transition-colors duration-300 cursor-pointer"
+          >
+            skills & technologies
+          </h3>
+          <SkillsModal isOpen={isSkillsModalOpen} onClose={() => setIsSkillsModalOpen(false)} />
             <div>
               <p className="font-semibold mb-3 text-lg dark:text-green-400 transition-colors duration-300">Languages</p>
               <div className="flex flex-wrap gap-3">
@@ -267,7 +270,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      {!openCertificateModalIndex && openProjectModalIndex === null && <ContactPanel />}
+      {!openCertificateModalIndex && openProjectModalIndex === null && !isSkillsModalOpen && <ContactPanel />}
 
       {/* Conditionally render the StatsModal */}
       {showStats && <StatsModal onClose={() => setShowStats(false)} />}

@@ -1,42 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Loader2 } from "lucide-react";
+import { skillImages } from "../data/skills";
 
-const techStackIcons = [
-  "/tech/js.svg",
-  "/tech/html.svg",
-  "/tech/css.svg",
-  "/tech/pygame.svg",
-  "/tech/python.svg",
-  "/tech/gemini.svg",
-  "/tech/react.svg",
-  "/tech/lambda.svg",
-  "/tech/bedrock.svg",
-  "/tech/polly.svg",
-  "/tech/gateway.svg",
-  "/tech/iam.svg",
-  "/tech/vite.svg",
-  "/tech/tensorflow.svg",
-  "/tech/flask.svg",
-  "/tech/sqlalchemy.svg",
-  "/tech/tailwind.svg",
-  "/tech/fastapi.svg",
-  "/tech/express.svg",
-  "/tech/prisma.svg",
-  "/tech/mantine.svg",
-  "/tech/nextjs.svg",
-  "/tech/socketio.svg",
-  "/tech/livekit.svg",
-  "/tech/uploadthing.png",
-  "/tech/supabase.svg",
-  "/tech/postgresql.svg",
-  "/tech/numpy.svg",
-  "/tech/pandas.svg",
-  "/tech/seaborn.svg",
-  "/tech/matplotlib.svg",
-  "/tech/scikit-learn.svg",
-  "/tech/bash.svg"
-];
+const techStackIcons = Object.values(skillImages);
 
 const personalLoadingMessages = [
   "Ryan's AI agents booting up...",

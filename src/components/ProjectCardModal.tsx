@@ -1,4 +1,5 @@
 import * as Dialog from "@radix-ui/react-dialog";
+import { X } from "lucide-react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 interface ProjectCardModalProps {
@@ -75,7 +76,7 @@ export function ProjectCardModal({
             className="absolute top-3 right-3 p-1 cursor-pointer"
             aria-label="Close"
           >
-            ✕
+            <X />
           </Dialog.Close>
         </Dialog.Content>
       </Dialog.Portal>

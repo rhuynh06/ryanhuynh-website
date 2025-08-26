@@ -1,5 +1,5 @@
 import * as Dialog from "@radix-ui/react-dialog";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, X } from "lucide-react";
 import { useState } from "react";
 
 interface CertificatePreviewModalProps {
@@ -67,7 +67,7 @@ export function CertificatePreviewModal({
             className="absolute top-3 right-3 p-1 cursor-pointer text-lg text-gray-600 dark:text-gray-300"
             aria-label="Close"
           >
-            ✕
+            <X />
           </Dialog.Close>
         </Dialog.Content>
       </Dialog.Portal>

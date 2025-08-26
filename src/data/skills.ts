@@ -51,3 +51,68 @@ export const tools: { name: string; level: Level }[] = [
   { name: "MongoDB", level: "gray" },
   { name: "Arduino", level: "gray" }
 ];
+
+export const other = [
+  { name: "Roblox" },
+  { name: "Volleyball" },
+  { name: "Soccer" },
+  { name: "Swim" },
+];
+
+export const skillImages: Record<string, string> = {
+  // Languages
+  "Python": "/tech/python.svg",
+  "C++": "/tech/cpp.svg",
+  "JavaScript": "/tech/js.svg",
+  "TypeScript": "/tech/ts.svg",
+  "HTML/CSS": "/tech/html.svg",
+  "SQL": "/tech/sql.svg",
+  "PHP": "/tech/php.svg",
+  "Java": "/tech/java.svg",
+  "Bash": "/tech/bash.svg",
+
+  // Frameworks & Libraries
+  "Flask": "/tech/flask.svg",
+  "FastAPI": "/tech/fastapi.svg",
+  "Tailwind CSS": "/tech/tailwind.svg",
+  "Next.js": "/tech/nextjs.svg",
+  "React": "/tech/react.svg",
+  "Node.js": "/tech/node.svg",
+  "Express": "/tech/express.svg",
+  "NumPy": "/tech/numpy.svg",
+  "Pandas": "/tech/pandas.svg",
+  "Seaborn": "/tech/seaborn.svg",
+  "Scikit-Learn": "/tech/scikit-learn.svg",
+  "Matplotlib": "/tech/matplotlib.svg",
+  "Django": "/tech/django.svg",
+  "PyTorch": "/tech/pytorch.svg",
+  "TensorFlow": "/tech/tensorflow.svg",
+
+  // Tools & Services
+  "GitHub": "/tech/github.svg",
+  "MySQL": "/tech/mysql.svg",
+  "VSCode": "/tech/vscode.svg",
+  "Supabase": "/tech/supabase.svg",
+  "Clerk Auth": "/tech/iam.svg",
+  "Docker": "/tech/docker.svg",
+  "Amplify": "/tech/amplify.svg",
+  "SQLAlchemy": "/tech/sqlalchemy.svg",
+  "Prisma": "/tech/prisma.svg",
+  "Bedrock": "/tech/bedrock.svg",
+  "Postgres": "/tech/postgresql.svg",
+  "Polly": "/tech/polly.svg",
+  "Playwright": "/tech/playwright.svg",
+  "MongoDB": "/tech/mongodb.svg",
+  "Arduino": "/tech/platformio.svg",
+
+  // Languages - Spoken
+  "English (Fluent)": "/tech/english.png",
+  "Vietnamese (Fluent)": "/tech/vietnamese.png",
+  "Spanish (Elementary)": "/tech/spanish.jpg",
+
+  // Other
+  "Roblox": "/tech/roblox.png",
+  "Volleyball": "/tech/volleyball.png",
+  "Soccer": "/tech/soccer.png",
+  "Swim": "/tech/swim.png"
+};
