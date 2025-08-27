@@ -112,17 +112,17 @@ function App() {
 
         <div className="basis-2/4 flex justify-center">
         {/* add when stats are worth showing */}
-         {/* <button
+         <button
             onClick={() => setShowStats(true)}
             className="p-0 bg-transparent border-none cursor-default"
             aria-label="Show stats"
-          > */}
+          >
             <img
               src="/pfp.png"
               alt="Ryan's profile photo"
               className="w-auto h-auto rounded-full border-3 border-black dark:border-4 dark:border-green-400 dark:shadow-[0_0_10px_#56ff1b]"
             />
-          {/* </button> */}
+          </button>
         </div>
       </section>
 
