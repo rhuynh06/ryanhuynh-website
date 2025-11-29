@@ -3,7 +3,7 @@ export const projects = [
     name: "Task Manager",
     role: "Full-stack Developer",
     desc: "Built a task management web app enabling users to add/edit/delete tasks with persistent local storage.",
-    longDesc: "Task Manager is a productivity web app built with vanilla JS, HTML, and CSS. It allows users to create, organize, and prioritize daily tasks with persistent local storage. Enhanced usability through color-coded priorities and responsive layouts improves productivity and accessibility.",
+    longDesc: "Task Manager is a productivity web app built with React and TypeScript. It allows users to create, organize, and prioritize daily tasks with persistent local storage. Enhanced usability through color-coded priorities and responsive layouts improves productivity and accessibility.",
     websiteLink: "https://rhuynh06.github.io/task-manager/",
     imageUrl: "/projects/task-manager.png",
     githubUrl: "https://github.com/rhuynh06/task-manager",
