@@ -123,4 +123,13 @@ export const certifications: {
     link: "", // TODO
     img: "/certificates/fcc/Machine Learning with Python.png"
   },
+  {
+    title: "Unix Shell",
+    issuer: "UCI",
+    date: "December 2025",
+    icon: "/certificates/icons/uci.svg",
+    status: "completed",
+    link: "https://www.credly.com/badges/44df2d60-f801-4b71-9fd5-46c7d6d5b123/public_url",
+    img: "/certificates/uci/Unix Shell.png"
+  }
 ];
