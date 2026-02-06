@@ -64,7 +64,6 @@ export const relatedCoursework = [
     code: "I&C SCI 51",
     link: "https://catalogue.uci.edu/allcourses/i_c_sci/"
   },
-/* winter 2026
   {
     title: "Machine Learning and Data-Mining",
     code: "COMPSCI 178",
@@ -80,12 +79,6 @@ export const relatedCoursework = [
     code: "I&C SCI 53",
     link: "https://catalogue.uci.edu/allcourses/i_c_sci/"
   },
-  {
-    title: "Engineering Innovations in Treating Diabetes",
-    code: "BME 3",
-    link: "https://catalogue.uci.edu/allcourses/bme/"
-  },
-*/
 /* spring 2026
   {
     title: "Introduction to Artificial Intelligence",
@@ -123,6 +116,11 @@ export const relatedCoursework = [
   //   title: "Critical Writing on Information Technology",
   //   code: "I&C SCI 139W",
   //   link: "https://catalogue.uci.edu/allcourses/i_c_sci/"
+  // },
+  {
+  //   title: "Project in Computer Vision",
+  //   code: "COMPSCI 117",
+  //   link: "https://catalogue.uci.edu/allcourses/compsci/"
   // },
 */
 /* winter 2027
