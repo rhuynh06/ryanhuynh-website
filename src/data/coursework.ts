@@ -79,20 +79,19 @@ export const relatedCoursework = [
     code: "I&C SCI 53",
     link: "https://catalogue.uci.edu/allcourses/i_c_sci/"
   },
-/* spring 2026
   {
     title: "Introduction to Artificial Intelligence",
     code: "COMPSCI 171",
     link: "https://catalogue.uci.edu/allcourses/compsci/"
   },
   {
-    title: "Human Computer Interaction",
-    code: "IN4MATX 131",
-    link: "https://catalogue.uci.edu/allcourses/in4matx/"
+    title: "Project in Databases and Web Applications",
+    code: "COMPSCI 122B",
+    link: "https://catalogue.uci.edu/allcourses/compsci/"
   },
   {
-    title: "Formal Languages and Automata",
-    code: "COMPSCI 162",
+    title: "Information Retrieval",
+    code: "COMPSCI 121",
     link: "https://catalogue.uci.edu/allcourses/compsci/"
   },
   {
@@ -100,7 +99,6 @@ export const relatedCoursework = [
     code: "COMPSCI 165",
     link: "https://catalogue.uci.edu/allcourses/compsci/"
   },
-*/
 /* fall 2027
   // {
   //   title: "Software Design: Applications",
