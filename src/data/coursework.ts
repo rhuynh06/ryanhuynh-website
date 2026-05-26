@@ -99,32 +99,30 @@ export const relatedCoursework = [
     code: "COMPSCI 165",
     link: "https://catalogue.uci.edu/allcourses/compsci/"
   },
-/* fall 2027
-  // {
-  //   title: "Software Design: Applications",
-  //   code: "IN4MATX 121",
-  //   link: "https://catalogue.uci.edu/allcourses/in4matx/"
-  // },
-  // {
-  //   title: "Information Retrieval",
-  //   code: "COMPSCI 121",
-  //   link: "https://catalogue.uci.edu/allcourses/compsci/"
-  // },
-  // {
-  //   title: "Critical Writing on Information Technology",
-  //   code: "I&C SCI 139W",
-  //   link: "https://catalogue.uci.edu/allcourses/i_c_sci/"
-  // },
-  {
-  //   title: "Project in Computer Vision",
-  //   code: "COMPSCI 117",
-  //   link: "https://catalogue.uci.edu/allcourses/compsci/"
-  // },
-*/
-/* winter 2027
   {
     title: "Project in Artificial Intelligence",
     code: "COMPSCI 175",
+    link: "https://catalogue.uci.edu/allcourses/compsci/"
+  },
+  {
+    title: "Human Computer Interaction",
+    code: "IN4MATX 131",
+    link: "https://catalogue.uci.edu/allcourses/compsci/"
+  },
+  {
+    title: "Critical Writing on Information Technology",
+    code: "I&C SCI 139W",
+    link: "https://catalogue.uci.edu/allcourses/i_c_sci/"
+  },
+  {
+    title: "Project in Computer Vision",
+    code: "COMPSCI 117",
+    link: "https://catalogue.uci.edu/allcourses/compsci/"
+  }
+/* winter 2027
+  {
+    title: "Computational Photography and Vision",
+    code: "COMPSCI 116",
     link: "https://catalogue.uci.edu/allcourses/compsci/"
   },
   {
