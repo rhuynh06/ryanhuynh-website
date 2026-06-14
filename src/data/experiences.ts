@@ -1,5 +1,12 @@
 export const experiences = [
    {
+      name: "IBM",
+      position: "SDE Intern",
+      dates: "June - Sept 2026",
+      desc: `To be added...`,
+      imageUrl: "/experiences/ibm.png"
+   },
+   {
       name: "Independent Developer Group",
       position: "Full-stack Web and AI Application Developer",
       dates: "June — Sept 2025",
