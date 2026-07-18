@@ -40,16 +40,20 @@ export const tools: { name: string; level: Level }[] = [
   { name: "VSCode", level: "green" },
   { name: "Supabase", level: "green" },
   { name: "Clerk Auth", level: "green" },
+  { name: "Zowe Explorer", level: "green"},
+  { name: "MCP", level: "green" },
+  { name: "MongoDB", level: "yellow" },
   { name: "Docker", level: "yellow" },
+  { name: "Apache Tomcat", level: "yellow" },
   { name: "Amplify", level: "yellow" },
   { name: "SQLAlchemy", level: "yellow" },
   { name: "Prisma", level: "yellow" },
   { name: "Bedrock", level: "yellow" },
   { name: "Postgres", level: "yellow" },
   { name: "Polly", level: "yellow" },
-  { name: "Playwright", level: "gray"},
-  { name: "MongoDB", level: "gray" },
-  { name: "Arduino", level: "gray" }
+  { name: "JDBC", level: "yellow" },
+  { name: "Playwright", level: "gray" },
+  { name: "Arduino", level: "gray" },
 ];
 
 export const other = [
