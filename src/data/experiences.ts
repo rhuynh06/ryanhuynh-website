@@ -3,7 +3,7 @@ export const experiences = [
       name: "IBM",
       position: "SDE Intern",
       dates: "June - Sept 2026",
-      desc: `To be added...`,
+      desc: `Built MCP tooling and Agent Skills that give AI Assistants reliable access to mainframe dataset transfers, with logging, cancel, and resume session architecture and CI/CD-driven releases through Scrum team workflow. Also automated GitHub project management workflows and wrote TestRail coverage for MCP tools.`,
       imageUrl: "/experiences/ibm.png"
    },
    {
