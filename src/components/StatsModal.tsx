@@ -25,7 +25,7 @@ export function StatsModal({ onClose }: StatsModalProps) {
         </h2>
 
         <img
-          src="https://github-readme-stats.vercel.app/api?username=rhuynh06&show_icons=true&theme=radical"
+          src="https://github-stats-extended.vercel.app/api?username=rhuynh06&include_all_commits=true&theme=dark_github"
           alt="GitHub Stats"
           className="mx-auto my-6 rounded-xl shadow-lg"
         />
