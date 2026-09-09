@@ -131,5 +131,14 @@ export const certifications: {
     status: "completed",
     link: "https://www.credly.com/badges/44df2d60-f801-4b71-9fd5-46c7d6d5b123/public_url",
     img: "/certificates/uci/Unix Shell.png"
+  },
+  {
+    title: "WatsonX Challenge",
+    issuer: "IBM",
+    date: "July 2026",
+    icon: "/certificates/icons/ibm.svg",
+    status: "completed",
+    link: "https://www.credly.com/badges/71480b49-308b-46fa-867f-6316376c3621/public_url",
+    img: "/certificates/ibm/watsonx.png"
   }
 ];

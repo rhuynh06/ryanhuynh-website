@@ -165,28 +165,24 @@ export function ProjectCard({
 
           {/* Back */}
           <div
-            className="absolute w-full h-full backface-hidden rotate-y-180
-              bg-gradient-to-br from-blue-100 via-white to-pink-100
-              dark:from-green-900 dark:via-black dark:to-green-800
-              border border-blue-100 dark:border-green-600
-              rounded-2xl shadow-xl p-4 flex flex-col items-center justify-center text-center
-              transition-colors duration-300"
+            className="flip-card-back absolute w-full h-full backface-hidden rotate-y-180"
           >
-            <p className="text-sm text-blue-900 dark:text-green-400 font-medium mb-2">
+            <span className="flip-card-label">Project overview</span>
+            <p className="flip-card-description">
               {desc}
             </p>
 
             {collaborators && collaborators.length > 0 && (
-              <div className="mt-3 text-xs text-blue-700 dark:text-green-300">
-                <p className="font-semibold mb-1">Collaborators:</p>
+              <div className="flip-card-collaborators">
+                <p className="flip-card-subtitle">Collaborators</p>
                 <ul className="space-y-1">
                   {collaborators.map((c, i) => (
                     <li key={i}>
                       {c.name}
                       {c.affiliation && (
-                        <span className="italic text-gray-600 dark:text-gray-400">
+                        <span className="flip-card-affiliation">
                           {" "}
-                          — {c.affiliation}
+                          - {c.affiliation}
                         </span>
                       )}
                     </li>
@@ -195,9 +191,7 @@ export function ProjectCard({
               </div>
             )}
 
-            <p className="text-xs mt-5 text-blue-800 dark:text-green-500 font-semibold">
-              Click the image on the front to see more details
-            </p>
+            <span className="flip-card-hint">Select the image for full details</span>
           </div>
         </div>
       </div>

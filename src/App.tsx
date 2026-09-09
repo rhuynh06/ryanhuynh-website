@@ -39,13 +39,6 @@ function App() {
     { href: "#certificates", label: "Certificates" },
   ];
 
-  const navButtonClasses =
-    "btn px-5 py-2 rounded-4xl transition relative overflow-hidden " +
-    "bg-blue-500 text-white border border-blue-400 shadow-md " + 
-    "hover:bg-blue-600 hover:shadow-lg " + 
-    "dark:bg-[#0f380f] dark:text-[#a1ff0a] dark:border-[#56ff1b] dark:shadow-green-500 dark:hover:shadow-[0_0_20px_#a1ff0a] " +
-    "btn-light dark:btn-dark";
-
   function sortCertificates(certificates: CertificateData[]) {
     return [...certificates].sort((a, b) => {
       // 1. Status: completed first
@@ -70,7 +63,7 @@ function App() {
   }
 
   useEffect(() => {
-    const timeout = setTimeout(() => setLoading(false), 5000);
+    const timeout = setTimeout(() => setLoading(false), 900);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -90,70 +83,72 @@ function App() {
   }
 
   return (
-   <div className="max-w-6xl mx-auto space-y-0">
+  <div className="site-shell">
 
       {/* Header */}
-      <section className="min-h-screen flex items-center p-6 lg:pl-[72px] max-w-6xl mx-auto" data-aos="fade-up">
-        <div className="basis-2/4 flex flex-col space-y-4 max-w-[60%] text-left break-words">
-          <h3 className="text-lg font-semibold">hi! i am</h3>
-          <h1 className="text-3xl font-bold mb-6 decoration-2 dark:text-green-400 dark:drop-shadow-[0_0_10px_rgba(161,255,10,0.9)] transition-colors duration-300">Ryan Huynh</h1>
-          <h2 className="text-xl font-medium max-w-full">
+      <section className="hero-section" data-aos="fade-up">
+        <div className="hero-copy">
+          <p className="eyebrow">Computer science · intelligent systems</p>
+          <h1>Ryan Huynh</h1>
+          <h2>
             I am a programmer who is <LiveTyping phrases={introPhrases} />
           </h2>
+          <p className="hero-summary">I build thoughtful software at the intersection of AI, full-stack development, and everyday utility.</p>
 
-          <nav className="flex flex-wrap gap-4 mt-4">
-            {navLinks.map(({ href, label }) => (
-              <a key={href} href={href} className={navButtonClasses}>
+          <nav className="hero-nav" aria-label="Primary navigation">
+            {navLinks.map(({ href, label }, index) => (
+              <a key={href} href={href} className={index === 0 ? "nav-link nav-link-primary" : "nav-link"}>
                 {label}
               </a>
             ))}
           </nav>
+          <ContactPanel />
         </div>
 
-        <div className="basis-2/4 flex justify-center">
-        {/* add when stats are worth showing */}
+        <div className="hero-portrait-wrap">
          <button
             onClick={() => setShowStats(true)}
-            className="p-0 bg-transparent border-none cursor-default"
+            className="hero-portrait-button"
             aria-label="Show stats"
           >
             <img
               src="/pfp.png"
               alt="Ryan's profile photo"
-              className="w-auto h-auto rounded-full border-3 border-black dark:border-4 dark:border-green-400 dark:shadow-[0_0_10px_#56ff1b]"
+              className="hero-portrait"
             />
           </button>
+          <span className="portrait-note">currently building<br />and learning in public</span>
         </div>
       </section>
 
       {/* Info */}
       <section
         id="about"
-        className="min-h-screen flex flex-col justify-center items-center text-center p-8 mb-4"
+        className="content-section about-section"
       >
-        <div className="flex flex-col lg:flex-row gap-12 w-full max-w-6xl text-left">
-          <div className="flex-1 space-y-6">
-            <h3 
-              className="text-3xl font-bold mb-6 underline decoration-2 underline-offset-4 dark:text-green-400 dark:drop-shadow-[0_0_10px_rgba(161,255,10,0.9)] transition-colors duration-300"
-            >
-              about me
-            </h3>
-            <div
-              className="space-y-5 text-lg leading-relaxed0"
-            >
+        <div className="section-heading">
+          <p className="eyebrow">01 / the person behind the projects</p>
+          <h2>About me</h2>
+        </div>
+        <div className="about-grid">
+          <div className="about-copy">
+            <div className="prose-copy">
               <p>
                 Hey, I'm a Computer Science undergraduate at <strong>UC Irvine</strong> specializing in Intelligent Systems. 
-                I'm currently diving deep into <strong>PyTorch</strong>, <strong>PostgreSQL</strong>, <strong>SQLAlchemy</strong>, and <strong>Prisma ORM</strong>, 
+                I'm currently diving deep into <strong>Express</strong>, <strong>PyTorch</strong>, <strong>Playwright</strong>, <strong>Scikit-Learn</strong>, 
                 while building AI-powered apps that aim to make everyday life just a bit easier.
               </p>
+              <br />
               <p>
                 I'm passionate about turning ideas into polished products blending creativity with practical problem-solving. 
-                I love exploring the intersection of AI and full-stack development, and often find myself experimenting with tools like <strong>React</strong>, <strong>Flask</strong>, and <strong>Tailwind CSS</strong>.
+                I love exploring the intersection of AI and full-stack development, and often find myself experimenting with tools like <strong>React</strong> and <strong>Flask</strong>.
               </p>
+              <br />
               <p>
                 Outside of coding, I'm a former tri-athlete in water polo, wrestling, and swim, experiences that shaped my discipline and teamwork.
                 These days, I recharge by spending time with family, getting outdoors, and exploring new places whenever I can.
               </p>
+              <br />
               <p>
                 Whether it's through open source, internships, or side projects, I'm always seeking new ways to learn and grow. 
                 If you're building something cool or just want to chat tech, feel free to reach out!
@@ -161,35 +156,35 @@ function App() {
             </div>
           </div>
 
-          <div className="flex-1 space-y-6">
-          <h3
+          <div className="skills-panel">
+          <button
             onClick={() => setIsSkillsModalOpen(true)}
-            className="text-3xl font-bold mb-6 underline decoration-2 underline-offset-4 dark:text-green-400 dark:drop-shadow-[0_0_10px_rgba(161,255,10,0.9)] transition-colors duration-300 cursor-pointer"
+            className="panel-heading"
           >
-            skills & technologies
-          </h3>
+            Skills & technologies <span>+</span>
+          </button>
           <SkillsModal isOpen={isSkillsModalOpen} onClose={() => setIsSkillsModalOpen(false)} />
-            <div>
-              <p className="font-semibold mb-3 text-lg dark:text-green-400 transition-colors duration-300">Languages</p>
-              <div className="flex flex-wrap gap-3">
+            <div className="skill-group">
+              <p>Languages</p>
+              <div className="tag-list">
                 {languages.map((language, i) => (
                   <Tag key={i} {...language} />
                 ))}
               </div>
             </div>
 
-            <div>
-              <p className="font-semibold mb-3 text-lg dark:text-green-400 transition-colors duration-300">Frameworks & Libraries</p>
-              <div className="flex flex-wrap gap-3">
+            <div className="skill-group">
+              <p>Frameworks & libraries</p>
+              <div className="tag-list">
                 {frameworks.map((framework, i) => (
                   <Tag key={i} {...framework} />
                 ))}
               </div>
             </div>
 
-            <div>
-              <p className="font-semibold mb-3 text-lg dark:text-green-400 transition-colors duration-300">Tools & Services</p>
-              <div className="flex flex-wrap gap-3">
+            <div className="skill-group">
+              <p>Tools & services</p>
+              <div className="tag-list">
                 {tools.map((tool, i) => (
                   <Tag key={i} {...tool} />
                 ))}
@@ -202,19 +197,20 @@ function App() {
       {/* Experience Section */}
       <section
         id="experience"
-        className="min-h-screen flex flex-col justify-center items-center text-center p-8 mb-4"
+        className="content-section"
       >
-        <h2 className="text-3xl font-bold mb-6 underline decoration-2 underline-offset-4 dark:text-green-400 dark:drop-shadow-[0_0_10px_rgba(161,255,10,0.9)] transition-colors duration-300">
-          experience
-        </h2>
-        <div className="flex flex-wrap justify-center gap-6 w-full max-w-6xl mx-auto px-4 pb-5">
+        <div className="section-heading">
+          <p className="eyebrow">02 / where I have been</p>
+          <h2>Experience</h2>
+        </div>
+        <div className="card-grid experience-grid">
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} {...experience} />
           ))}
         </div>
 
-        <p className="font-semibold mb-3 text-lg dark:text-green-400 transition-colors duration-300">Related Coursework</p>
-        <div className="flex flex-wrap justify-center max-w-5xl gap-3">
+        <p className="subsection-label">Related coursework</p>
+        <div className="tag-list centered-tags">
           {relatedCoursework.map(({ title, code, link }, i) => (
             <Tag
               key={i}
@@ -230,12 +226,13 @@ function App() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="min-h-screen flex flex-col justify-center items-center text-center p-8 mb-4"
+        className="content-section"
       >
-        <h2 className="text-3xl font-bold mb-6 underline decoration-2 underline-offset-4 dark:text-green-400 dark:drop-shadow-[0_0_10px_rgba(161,255,10,0.9)] transition-colors duration-300">
-          projects
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center w-full px-4">
+        <div className="section-heading">
+          <p className="eyebrow">03 / selected work</p>
+          <h2>Projects</h2>
+        </div>
+        <div className="card-grid project-grid">
           {projects.map((project, index) => (
             <ProjectCard 
               key={index}
@@ -251,12 +248,13 @@ function App() {
       {/* Certificates */}
       <section
         id="certificates"
-        className="min-h-screen flex flex-col justify-center items-center text-center p-8 mb-4"
+        className="content-section"
       >
-        <h2 className="text-3xl font-bold mb-6 underline decoration-2 underline-offset-4 dark:text-green-400 dark:drop-shadow-[0_0_10px_rgba(161,255,10,0.9)] transition-colors duration-300">
-          certifications
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center w-full px-4">
+        <div className="section-heading">
+          <p className="eyebrow">04 / things I have completed</p>
+          <h2>Certifications</h2>
+        </div>
+        <div className="card-grid certificate-grid">
           {sortCertificates(certifications).map((cert, index) => (
             <CertificateCard
               key={cert.title}
@@ -270,13 +268,11 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      {!openCertificateModalIndex && openProjectModalIndex === null && !isSkillsModalOpen && <ContactPanel />}
-
       {/* Conditionally render the StatsModal */}
       {showStats && <StatsModal onClose={() => setShowStats(false)} />}
 
       {/* Footer */}
-      <footer className="w-full text-center pt-10 pb-6 text-gray-500 dark:text-gray-400 select-none">
+      <footer className="site-footer">
         © {new Date().getFullYear()} Ryan Huynh. All Rights Reserved.
       </footer>
     </div>

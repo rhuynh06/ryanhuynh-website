@@ -8,7 +8,7 @@ export const languages: { name: string; level: Level }[] = [
   { name: "HTML/CSS", level: "green" },
   { name: "English (Fluent)", level: "green" },
   { name: "Vietnamese (Fluent)", level: "green" },
-  { name: "SQL", level: "yellow" },
+  { name: "SQL", level: "green" },
   { name: "PHP", level: "yellow" },
   { name: "Java", level: "yellow" },
   { name: "Bash", level: "yellow" },

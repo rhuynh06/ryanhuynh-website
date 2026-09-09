@@ -20,7 +20,7 @@ export function ExperienceCard({
   return (
     <div
       onClick={() => setFlipped(!flipped)}
-      className="w-80 h-40 cursor-pointer"
+      className="w-80 h-56 cursor-pointer"
     >
       <div
         className={`relative w-auto h-full transition-transform duration-700 transform-style-preserve-3d ${
@@ -61,16 +61,10 @@ export function ExperienceCard({
 
         {/* Back */}
         <div
-          className="absolute w-full h-full backface-hidden rotate-y-180
-            bg-gradient-to-br from-blue-100 via-white to-pink-100
-            dark:from-green-900 dark:via-black dark:to-green-800
-            border border-blue-100 dark:border-green-600
-            rounded-2xl shadow-xl p-4 flex items-center justify-center text-center
-            transition-colors duration-300"
+          className="flip-card-back absolute w-full h-full backface-hidden rotate-y-180"
         >
-          <p className="text-sm text-gray-800 dark:text-green-400 text-center">
-            {desc}
-          </p>
+          <span className="flip-card-label">Overview</span>
+          <p>{desc}</p>
         </div>
       </div>
     </div>
