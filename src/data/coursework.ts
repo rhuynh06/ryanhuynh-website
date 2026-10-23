@@ -115,9 +115,9 @@ export const relatedCoursework = [
     link: "https://catalogue.uci.edu/allcourses/i_c_sci/"
   },
   {
-    title: "Project in Computer Vision",
-    code: "COMPSCI 117",
-    link: "https://catalogue.uci.edu/allcourses/compsci/"
+    title: "Engineering Artificial Intelligence Software",
+    code: "SWE 119",
+    link: "https://catalogue.uci.edu/allcourses/swe"
   }
 /* winter 2027
   {
